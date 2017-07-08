@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+	</script>
+</head>
+<body>
+	<div class="photo">
+			<label id="logo"><img src="img/100px.png" id="img"></label>
+				<input type="file" style="display: none;"  id="input" accept="image/*"
+				 value="" onchange="readURL(this);" onclick="myFunction(input)">
+	</div>
+	<script type="text/javascript">
+
+		document.getElementById("logo").onclick = function() {myFunction()};
+		function myFunction (input){
+			console.log('123');
+		};
+
+		 function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#img')
+                        .attr('src', e.target.result)
+                        .width(100)
+                        .height(100);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        
+	</script>
+</body>
+</html>
