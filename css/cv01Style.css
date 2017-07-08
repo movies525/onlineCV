@@ -1,0 +1,201 @@
+h1{
+			font-size: 3em;
+			font-weight: bold;
+		}
+		h2{
+			font-size: 2em;
+		}
+		h5{
+			font-size: 1.1em;
+		}
+		/*大塊div彼此距離*/
+		.photo,.name,.birthAdd,.phoneEmailWeb,.aboutMe,.education,.experience,.skills,.achievement{
+			margin: 2em 0;
+		}
+		/*左邊*/
+		#logo{
+			cursor: pointer;
+		}
+
+		.photo img{
+			border-radius: 50%;
+			border: 8px solid black;
+		}
+		.wrap{
+			width: 100%;
+			width: 1000px;
+			height: 1400px;
+			margin: 0 auto;
+			position: relative;
+			background-image: url("../img/flowerBg.jpg");
+			/*background:url(img/flowerBg.jpg) no-repeat;*/
+		}
+		.wrapInside{
+			top: 2em;
+			position: relative;
+			width: 900px;
+			height: 1300px;
+			background: white;
+			padding: 1em;
+			margin: 0 auto;
+		}
+		.left{
+			position: absolute;
+			width: 20%;
+		}
+		.leftTitle{
+			float: left;
+			width: 35%;
+			margin-bottom: 0.5em;
+			font-weight: bold;
+		}
+		.leftContent{
+			float: left;
+			width: 55%;
+			margin-bottom: 0.5em;
+			padding-left:10%;
+		}
+		.phone{
+			margin-bottom: 0.5em;
+		}
+		/*右邊*/
+		div.right:before{
+			content: "";
+			position: absolute;
+			width: 5px;
+			height: 100%;
+			border-left: 5px solid black;
+			top:2em;
+			bottom: 0;
+			left: -70px;
+		}
+
+		div .aboutMe:before{
+			content: "";
+			position: absolute;
+			width: 20px;
+			height:20px;
+			border-radius: 50%;
+			background: #E80C7A;
+			left: -77.5px;
+			text-align: center;
+		}
+		div .education:before{
+			content: "";
+			position: absolute;
+			width: 20px;
+			height:20px;
+			border-radius: 50%;
+			background: #E80C7A;
+			left: -77.5px;
+			text-align: center;
+		}
+		div .experience:before{
+			content: "";
+			position: absolute;
+			width: 20px;
+			height:20px;
+			border-radius: 50%;
+			background: #E80C7A;
+			left: -77.5px;
+			text-align: center;
+		}
+		.right{
+			position: absolute;
+			left: 30%;
+			width: 67%;
+		}
+		.year{
+			float:left;
+			width: 8%;
+			font-weight: bold;
+
+		}
+		.school{
+			float: left;
+			padding-left:2%;
+			width: 90%;
+		}
+		.school h5{
+			font-weight: bold;
+		}
+		li:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+		/*SKILL*/
+		div .skills:before{
+			content: "";
+			position: absolute;
+			width: 20px;
+			height:20px;
+			border-radius: 50%;
+			background: #E80C7A;
+			left: -77.5px;
+			text-align: center;
+		}
+		.skills li {
+			float: left;
+			width: 50%;
+			padding-bottom: 0.5em;
+		}
+		.skillsTitle{
+			float: left;
+			width: 40%;
+			font-weight: bold;
+			margin-right: 3%;
+		}
+		.score div{
+			float: left;
+			width: 1em;
+			height:1em;
+			margin-right: 0.5em;
+			border-radius: 50%;
+			border: 1px solid black;
+			cursor: pointer;
+		}
+		/*星等評分*/
+		div.star.hover{
+			background: black;
+		}
+		div.star.rated{
+			background-position: 0 20px;
+		}
+		/*achievement*/
+		div .achievement:before{
+			content: "";
+			position: absolute;
+			width: 20px;
+			height:20px;
+			border-radius: 50%;
+			background: #E80C7A;
+			left: -77.5px;
+			text-align: center;
+		}
+		div .achievement:after{
+			content: "";
+			position: absolute;
+			width: 20px;
+			height:20px;
+			border-radius: 50%;
+			background: #E80C7A;
+			left: -77.5px;
+			bottom: -2em;
+			text-align: center;
+		}
+		.achievement li{
+			float: left;
+			width: 50%;
+		}
+		.achTitle {
+			font-weight: bold;
+		}
+		.clearfix{
+			clear: both;
+		}
+@media print {
+.wrap {
+    /*background-color: white !important;*/
+    -webkit-print-color-adjust: exact; 
+}}

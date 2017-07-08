@@ -3,437 +3,239 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/cv01Style.css">
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.min.js"
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	  crossorigin="anonymous">
 	</script>
-	<style type="text/css">
-		h1{
-			font-size: 3em;
-			font-weight: bold;
-		}
-		h2{
-			font-size: 2em;
-		}
-		h5{
-			font-size: 1.1em;
-		}
-		/*大塊div彼此距離*/
-		.photo,.name,.birthAdd,.phoneEmailWeb,.aboutMe,.education,.experience,.skills,.achievement{
-			margin: 2em 0;
-		}
-		/*左邊*/
-		#logo{
-			cursor: pointer;
-		}
-
-		.photo img{
-			border-radius: 50%;
-			border: 8px solid black;
-		}
-		.wrap{
-			width: 100%;
-			width: 1000px;
-			height: 1500px;
-			margin: 0 auto;
-			position: relative;
-			background-image: url("img/flowerBg.jpg");
-		}
-		.wrapInside{
-			top: 2em;
-			position: relative;
-			width: 900px;
-			height: 1400px;
-			background: white;
-			padding: 1em;
-			margin: 0 auto;
-		}
-		.left{
-			position: absolute;
-			width: 20%;
-		}
-		.leftTitle{
-			float: left;
-			width: 35%;
-			margin-bottom: 0.5em;
-			font-weight: bold;
-		}
-		.leftContent{
-			float: left;
-			width: 55%;
-			margin-bottom: 0.5em;
-			padding-left:10%;
-		}
-		.phone{
-			margin-bottom: 0.5em;
-		}
-		/*右邊*/
-		div.right:before{
-			content: "";
-			position: absolute;
-			width: 5px;
-			height: 100%;
-			border-left: 5px solid black;
-			top:2em;
-			bottom: 0;
-			left: -70px;
-		}
-
-		div .aboutMe:before{
-			content: "";
-			position: absolute;
-			width: 20px;
-			height:20px;
-			border-radius: 50%;
-			background: #E80C7A;
-			left: -77.5px;
-			text-align: center;
-		}
-		div .education:before{
-			content: "";
-			position: absolute;
-			width: 20px;
-			height:20px;
-			border-radius: 50%;
-			background: #E80C7A;
-			left: -77.5px;
-			text-align: center;
-		}
-		div .experience:before{
-			content: "";
-			position: absolute;
-			width: 20px;
-			height:20px;
-			border-radius: 50%;
-			background: #E80C7A;
-			left: -77.5px;
-			text-align: center;
-		}
-		.right{
-			position: absolute;
-			left: 30%;
-			width: 67%;
-		}
-		.year{
-			float:left;
-			width: 8%;
-			font-weight: bold;
-
-		}
-		.school{
-			float: left;
-			padding-left:2%;
-			width: 90%;
-		}
-		.school h5{
-			font-weight: bold;
-		}
-		li:after{
-			content: "";
-			clear: both;
-			display: block;
-		}
-		/*SKILL*/
-		div .skills:before{
-			content: "";
-			position: absolute;
-			width: 20px;
-			height:20px;
-			border-radius: 50%;
-			background: #E80C7A;
-			left: -77.5px;
-			text-align: center;
-		}
-		.skills li {
-			float: left;
-			width: 50%;
-			padding-bottom: 0.5em;
-		}
-		.skillsTitle{
-			float: left;
-			width: 40%;
-			font-weight: bold;
-			margin-right: 3%;
-		}
-		.score div{
-			float: left;
-			width: 1em;
-			height:1em;
-			margin-right: 0.5em;
-			border-radius: 50%;
-			border: 1px solid black;
-			cursor: pointer;
-		}
-		/*星等評分*/
-		div.star.hover{
-			background: black;
-		}
-		div.star.rated{
-			background-position: 0 20px;
-		}
-		/*achievement*/
-		div .achievement:before{
-			content: "";
-			position: absolute;
-			width: 20px;
-			height:20px;
-			border-radius: 50%;
-			background: #E80C7A;
-			left: -77.5px;
-			text-align: center;
-		}
-		div .achievement:after{
-			content: "";
-			position: absolute;
-			width: 20px;
-			height:20px;
-			border-radius: 50%;
-			background: #E80C7A;
-			left: -77.5px;
-			bottom: -2em;
-			text-align: center;
-		}
-		.achievement li{
-			float: left;
-			width: 50%;
-		}
-		.achTitle {
-			font-weight: bold;
-		}
-		.clearfix{
-			clear: both;
-		}
-
-	</style>
 </head>
 <body>
 	<div class="wrap">
-	<div class="wrapInside">
-		<div class="left">
-			<div class="photo">
-				<label id="logo"><img src="img/100px.png" id="img">
-					<input type="file" style="display: none;"  id="input" accept="image/*"
-					 value="" onchange="readURL(this);" onclick="myFunction(input)">
-				</label>
-					
+		<div class="wrapInside">
+			<div class="left">
+				<div class="photo">
+					<label id="logo"><img src="img/100px.png" id="img">
+						<input type="file" style="display: none;"  id="input" accept="image/*"
+						 value="" onchange="readURL(this);" onclick="myFunction(input)">
+					</label>
+				</div>
+				<div class="name" contenteditable="true">
+					<h1>APO LIAO</h1>
+				</div>
+				<div class="birthAdd" contenteditable="true">
+					<ul>
+						<li>
+							<div class="leftTitle">D.O.B:</div>
+							<div class="leftContent">
+								<p>1993.01.24</p>
+							</div>
+						</li>
+						<li>
+							<div class="leftTitle">性別:</div>
+							<div class="leftContent">
+								<p>女</p>
+							</div>
+						</li>
+						<li>
+							<div class="leftTitle">Address:</div>
+							<div class="leftContent">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+				<div class="phoneEmailWeb" contenteditable="true">
+					<ul>
+						<li>
+							<div class="phone">Phone:</div>
+							<div class="phone">
+								<p>0921222222</p>
+							</div>
+						</li>
+						<li>
+							<div class="phone">Email:</div>
+							<div class="phone">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+							</div>
+						</li>
+						<li>
+							<div class="phone">Website:</div>
+							<div class="phone">
+								<a href="http://apoportfolio.web.fc2.com/index.html">http://apoportfolio.web.fc2.com/index.html</a>
+							</div>
+						</li>
+					</ul>
+
+				</div>
 			</div>
-			<div class="name" contenteditable="true">
-				<h1>APO LIAO</h1>
-			</div>
-			<div class="birthAdd" contenteditable="true">
-				<ul>
-					<li>
-						<div class="leftTitle">D.O.B:</div>
-						<div class="leftContent">
-							<p>1993.01.24</p>
-						</div>
-					</li>
-					<li>
-						<div class="leftTitle">性別:</div>
-						<div class="leftContent">
-							<p>女</p>
-						</div>
-					</li>
-					<li>
-						<div class="leftTitle">Address:</div>
-						<div class="leftContent">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-						</div>
-					</li>
-				</ul>
+			<div class="right">
+				<div class="aboutMe" contenteditable="true">
+					<h2>ABOUT ME</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="education" contenteditable="true">
+					<h2>EDUCATION</h2>
+						<ul>
+							<li>
+								<div class="year">98-00</div>
+								<div class="school">
+									<p>Course studies</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tem</p>
+								</div>
+							</li>
+							<li>
+								<div class="year">00-03</div>
+								<div class="school">
+									<p>Course studies</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tem</p>
+								</div>
+							</li>
+						</ul>
+
+				</div>
+				<div class="experience" contenteditable="true">
+					<h2>EXPERIENCE</h2>
+						<ul>
+							<li>
+								<div class="year">04-05</div>
+								<div class="school">
+									<h5>Company Name</h5>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tempore autem consequuntur expedita</p>
+								</div>
+							</li>
+							<li>
+								<div class="year">06-10</div>
+								<div class="school">
+									<h5>Company Name</h5>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tempore autem consequuntur expedita</p>
+								</div>
+							</li>
+							<li>
+								<div class="year">10-17</div>
+								<div class="school">
+									<h5>Company Name</h5>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tempore autem consequuntur expedita</p>
+								</div>
+							</li>
+						</ul>
+
+				</div>
+				<div class="skills" contenteditable="true">
+					<h2>SKILLS</h2>
+						<ul>
+							<li>
+								<div class="skillsTitle">PHOTOSHOP</div>
+								<div class="score">
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+							</li>
+							<li>
+								<div class="skillsTitle">ILLUSTRATOR</div>
+								<div class="score">
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+							</li>
+							<li>
+								<div class="skillsTitle">INDESIGN</div>
+								<div class="score">
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+							</li>
+							<li>
+								<div class="skillsTitle">FLASH</div>
+								<div class="score">
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+							</li>
+							<li>
+								<div class="skillsTitle">HTML5</div>
+								<div class="score">
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+							</li>
+							<li>
+								<div class="skillsTitle">JAVASCRIPT</div>
+								<div class="score">
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+							</li>
+							<li>
+								<div class="skillsTitle">JQUERY</div>
+								<div class="score">
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+							</li>
+							<li>
+								<div class="skillsTitle">AUTOCAD</div>
+								<div class="score">
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+							</li>
+						</ul>
+						<div class="clearfix"></div>
+
+				</div>
+				<div class="achievement" contenteditable="true">
+					<h2>ACHIEVEMENT</h2>
+					<ul>
+						<li>
+							<div class="achTitle">GRAPHIC DESIGN AWARD</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ea labore doloremque eaque veritatis consectetur distinctio, ipsam perspiciatis cum expedita.</p>
+						</li>
+						<li>
+							<div class="achTitle">GRAPHIC DESIGN AWARD</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ea labore doloremque eaque veritatis consectetur distinctio, ipsam perspiciatis cum expedita.</p>
+						</li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+				<button onclick="PrintElem('body')">print</button>
 
 			</div>
-			<div class="phoneEmailWeb" contenteditable="true">
-				<ul>
-					<li>
-						<div class="phone">Phone:</div>
-						<div class="phone">
-							<p>0921222222</p>
-						</div>
-					</li>
-					<li>
-						<div class="phone">Email:</div>
-						<div class="phone">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-						</div>
-					</li>
-					<li>
-						<div class="phone">Website:</div>
-						<div class="phone">
-							<a href="http://apoportfolio.web.fc2.com/index.html">http://apoportfolio.web.fc2.com/index.html</a>
-						</div>
-					</li>
-				</ul>
-
-			</div>
+			<!-- <input type="button" name="123" class="button" value="X"> -->
 		</div>
-	<div class="right">
-		<div class="aboutMe" contenteditable="true">
-			<h2>ABOUT ME</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-		<div class="education" contenteditable="true">
-			<h2>EDUCATION</h2>
-				<ul>
-					<li>
-						<div class="year">98-00</div>
-						<div class="school">
-							<p>Course studies</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tem</p>
-						</div>
-					</li>
-					<li>
-						<div class="year">00-03</div>
-						<div class="school">
-							<p>Course studies</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tem</p>
-						</div>
-					</li>
-				</ul>
-
-		</div>
-		<div class="experience" contenteditable="true">
-			<h2>EXPERIENCE</h2>
-				<ul>
-					<li>
-						<div class="year">04-05</div>
-						<div class="school">
-							<h5>Company Name</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tempore autem consequuntur expedita</p>
-						</div>
-					</li>
-					<li>
-						<div class="year">06-10</div>
-						<div class="school">
-							<h5>Company Name</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tempore autem consequuntur expedita</p>
-						</div>
-					</li>
-					<li>
-						<div class="year">10-17</div>
-						<div class="school">
-							<h5>Company Name</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tempore autem consequuntur expedita</p>
-						</div>
-					</li>
-				</ul>
-
-		</div>
-		<div class="skills" contenteditable="true">
-			<h2>SKILLS</h2>
-				<ul>
-					<li>
-						<div class="skillsTitle">PHOTOSHOP</div>
-						<div class="score">
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-						</div>
-					</li>
-					<li>
-						<div class="skillsTitle">ILLUSTRATOR</div>
-						<div class="score">
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-						</div>
-					</li>
-					<li>
-						<div class="skillsTitle">INDESIGN</div>
-						<div class="score">
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-						</div>
-					</li>
-					<li>
-						<div class="skillsTitle">FLASH</div>
-						<div class="score">
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-						</div>
-					</li>
-					<li>
-						<div class="skillsTitle">HTML5</div>
-						<div class="score">
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-						</div>
-					</li>
-					<li>
-						<div class="skillsTitle">JAVASCRIPT</div>
-						<div class="score">
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-						</div>
-					</li>
-					<li>
-						<div class="skillsTitle">JQUERY</div>
-						<div class="score">
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-						</div>
-					</li>
-					<li>
-						<div class="skillsTitle">AUTOCAD</div>
-						<div class="score">
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-							<div class="star"></div>
-						</div>
-					</li>
-				</ul>
-				<div class="clearfix"></div>
-
-		</div>
-		<div class="achievement" contenteditable="true">
-			<h2>ACHIEVEMENT</h2>
-			<ul>
-				<li>
-					<div class="achTitle">GRAPHIC DESIGN AWARD</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ea labore doloremque eaque veritatis consectetur distinctio, ipsam perspiciatis cum expedita.</p>
-				</li>
-				<li>
-					<div class="achTitle">GRAPHIC DESIGN AWARD</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ea labore doloremque eaque veritatis consectetur distinctio, ipsam perspiciatis cum expedita.</p>
-				</li>
-			</ul>
-			<div class="clearfix"></div>
-		</div>
-
 	</div>
-		<!-- <input type="button" name="123" class="button" value="X"> -->
-	</div>
-	</div>
-	<!-- 點擊button 刪除整個div -->
-	<script type="text/javascript">
+	<script>
 		// var photoClick = document.querySelector('.button');
 		// photoClick.addEventListener('click',function (e){
 		// 	console.log(e.target.nodeName);
@@ -442,11 +244,9 @@
 		// 		element.remove();
 		// 	}
 		// },false);
-		
+
 		// var getFile = document.querySelector('.photo');
-		
 		// 評分
-		
 		$(document).on("click",".star",function(e){
 			// $('.star').removeAttr('data-selected');
 			var $this = $(this);
@@ -495,8 +295,36 @@
 
                 reader.readAsDataURL(input.files[0]);
             }
-        }
+        };
 
+        //列印
+        function PrintElem(elem){
+        Popup($('<div/>').append($(elem).clone()).html());
+    	};
+        function Popup(data) {
+      var mywindow = window.open('', 'new div', 'height=400,width=600');
+      mywindow.document.write('<html><head><title></title>');
+      // mywindow.document.write( "<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" media=\"print\"/>" );
+      mywindow.document.write('<link rel="stylesheet" href="css/cv01Style.css" type="text/css" media="print"/>');
+      mywindow.document.write('<link rel="stylesheet" href="css/reset.css" type="text/css" media="print" />');
+      // mywindow.document.write('<link media=\"print')
+      mywindow.document.write('</head><body >');
+      mywindow.document.write(data);
+      mywindow.document.write('</body></html>');
+      mywindow.document.close();
+      mywindow.focus();
+      setTimeout(function(){mywindow.print();},1000);
+      // mywindow.close();
+
+      return true;
+	};
+
+
+        // function funPrint() {
+        // 	// document.write( "<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" media=\"print\"/>" );
+        // 	window.print();
+        // 	console.log("print");
+        // };
 
 	</script>
 </body>
