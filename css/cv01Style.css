@@ -24,17 +24,18 @@ h1{
 		.wrap{
 			width: 100%;
 			width: 1000px;
-			height: 1400px;
+			height: 1412px;
 			margin: 0 auto;
 			position: relative;
+			/*list-style-image: url("../img/flowerBg.jpg");*/
 			background-image: url("../img/flowerBg.jpg");
-			/*background:url(img/flowerBg.jpg) no-repeat;*/
+			/*background:url("..img/flowerBg.jpg") no-repeat;*/
 		}
 		.wrapInside{
 			top: 2em;
 			position: relative;
 			width: 900px;
-			height: 1300px;
+			height: 1315px;
 			background: white;
 			padding: 1em;
 			margin: 0 auto;
@@ -196,6 +197,6 @@ h1{
 		}
 @media print {
 .wrap {
-    /*background-color: white !important;*/
+    /*/background-image: url("../img/flowerBg.jpg") !important;*/
     -webkit-print-color-adjust: exact; 
 }}
