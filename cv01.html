@@ -5,6 +5,8 @@
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/cv01Style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.min.js"
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -216,21 +218,29 @@
 
 				</div>
 				<div class="achievement">
+				<div class="toolbar">
+					<i class="material-icons add">add_circle</i>
+					<i class="material-icons delete">remove_circle</i>
+
+				</div>
 					<h2 contenteditable="true">ACHIEVEMENT</h2>
 					<ul>
+						<div id="award1">
 						<li>
 							<div class="achTitle" contenteditable="true">GRAPHIC DESIGN AWARD</div>
-							<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ea labore doloremque eaque veritatis consectetur distinctio, ipsam perspiciatis cum expedita.</p>
+							<p contenteditable="true" class="achP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ea labore doloremque eaque veritatis consectetur distinctio, ipsam perspiciatis cum expedita.</p>
 						</li>
-						<li>
+						<li >
 							<div class="achTitle" contenteditable="true">GRAPHIC DESIGN AWARD</div>
-							<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ea labore doloremque eaque veritatis consectetur distinctio, ipsam perspiciatis cum expedita.</p>
+							<p contenteditable="true" class="achP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ea labore doloremque eaque veritatis consectetur distinctio, ipsam perspiciatis cum expedita.</p>
 						</li>
+						</div>
 					</ul>
 					<div class="clearfix"></div>
 				</div>
 				<button onclick="PrintElem('body')">print</button>
 				<input type="button" name="123" class="button" value="X">
+				<!-- <button class="add">增加區塊</button> -->
 
 			</div>
 		</div>
@@ -311,7 +321,33 @@
 
 	      return true;
 		};
-		
+		//加入區塊
+		$(document).on("click",".add",function(e){
+			console.log('add');
+			// get the last DIV which ID starts with ^= "award"
+			var $div = $('div[id^="award"]:last');
+			var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
+			// Clone it and assign the new ID (i.e: from num 4 to ID "award4")
+			var $award = $div.clone().prop('id', 'award'+num );
+			// Finally insert $klon wherever you want
+			$div.after( $award );
+
+		});
+		//區塊focus
+		// $(".achTitle,.achP,.add,.achievement").focus(function(){
+		// 	$(".toolbar").css("display","block");
+		// });
+		// $(".achTitle,.achP,.add,.achievement").blur(function(){
+		// 	$(".toolbar").css("display","none");
+		// });
+		$(document).on("click",".achievement",function(e){
+			console.log(this.nodeName);
+			$(".toolbar").css("display","block");
+			setTimeout(function(){
+				$(".toolbar").css("display","none");
+			}, 10000);
+		});
+
 
 
 	</script>

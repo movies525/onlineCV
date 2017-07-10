@@ -1,4 +1,4 @@
-h1{
+		h1{
 			font-size: 3em;
 			font-weight: bold;
 		}
@@ -24,7 +24,7 @@ h1{
 		.wrap{
 			width: 100%;
 			width: 1000px;
-			height: 1412px;
+			height: 1414px;
 			margin: 0 auto;
 			position: relative;
 			/*list-style-image: url("../img/flowerBg.jpg");*/
@@ -184,6 +184,23 @@ h1{
 			left: -77.5px;
 			bottom: -2em;
 			text-align: center;
+		}
+		.achievement{
+			position: relative;
+		}
+		.toolbar{
+			position: absolute;
+			height: 50px;
+			width: 35px;
+			left: -50px;
+			top: 30px;
+			padding: 5px 0;
+			border: 3px solid #E80C7A;
+			border-radius:10px;
+			text-align: center;
+			color: #E80C7A;
+			display: none;
+			cursor: pointer;
 		}
 		.achievement li{
 			float: left;
