@@ -246,15 +246,7 @@
 		</div>
 	</div>
 	<script>
-		//刪除區塊功能
-		var photoClick = document.querySelector('.button');
-		photoClick.addEventListener('click',function (e){
-			// alert(e.target.nodeName);
-			if (e.target.nodeName == 'INPUT') {
-				var element = document.querySelector('.photo');
-				element.remove();
-			}
-		},false);
+		
 
 		// 評分
 		$(document).on("click",".star",function(e){
@@ -333,6 +325,22 @@
 			$div.after( $award );
 
 		});
+		//刪除區塊
+		$(document).on('click',".delete",function(e){
+			if(e.target.nodeName == 'DIV'){
+				var $div = $('div[id^="award"]:last');
+				$div.remove();
+			}
+		});
+		// var photoClick = document.querySelector('.button');
+		// photoClick.addEventListener('click',function (e){
+		// 	// alert(e.target.nodeName);
+		// 	if (e.target.nodeName == 'INPUT') {
+		// 		var element = document.querySelector('.photo');
+		// 		element.remove();
+		// 	}
+		// },false);
+
 		//區塊focus
 		// $(".achTitle,.achP,.add,.achievement").focus(function(){
 		// 	$(".toolbar").css("display","block");
@@ -340,12 +348,14 @@
 		// $(".achTitle,.achP,.add,.achievement").blur(function(){
 		// 	$(".toolbar").css("display","none");
 		// });
+
+		// toolbar顯示/不顯示
 		$(document).on("click",".achievement",function(e){
 			console.log(this.nodeName);
 			$(".toolbar").css("display","block");
 			setTimeout(function(){
 				$(".toolbar").css("display","none");
-			}, 10000);
+			}, 6000);
 		});
 
 

@@ -2,71 +2,189 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>indexDIV</title>
-	<script
-	  src="https://code.jquery.com/jquery-3.2.1.min.js"
-	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	  crossorigin="anonymous">
-	</script>
-	<link rel="stylesheet" type="text/css" href="reset.css">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+      <!-- @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css); -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
 	<style type="text/css">
+		body{
+			background: #265B78;
+		}
 		.wrap{
-		width: 100%;
-		margin: 0 auto;
-	}
-	.yellowBox{
-		width: 1000px;
-		margin: 0 auto;
-	}
-	.box{
-		float: left;
-			width: 33%;
-			border: 1px dashed black;
-			box-sizing: border-box;
-	}
-	#box01,#box07{
-		height: 300px;
-		border: none;
-	}
-	#box06,#box10{
-		height: 300px;
-	}
-	
-	#box02,#box05{
-		height: 150px;
-		border: none;
-	}
-	#box03,#box04,#box08,#box09{
-		height: 150px;
-	}
-	#box10,#box09{
-		border-top: none;
-	}
-	#box09{
-		border-bottom: none;
-	}
-	#box11{
-		width: 66%;
-		border: none;
-		border-top: 1px dashed black;
-	}
+			width: 600px;
+			margin: 50px auto;
+		}
+		.box01{
+			float: left;
+			width: 65%;
+			height: 150px;
+			background: black;
+			margin-bottom: 5%;
+		}
+		.box01 h1{
+			color: white;
+			font-family: 'Julius Sans One', sans-serif;
+			font-weight: bold;
+			font-size: 1.8em;
+			text-align: center;
+			padding: 1em 0;
+		}
+		.btnStart{
+			background: white;
+			font-size: 1.5em;
+			/*font-family: 'Julius Sans One', sans-serif;*/
+			/*border: 2px solid white;*/
+			font-family: 'Noto Sans TC', sans-serif;
+			width: 25%;
+			padding: 0.25em 0.5em;
+			text-align: center;
+			position: relative;
+			left: 130px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		.box02{
+			float: right;
+			width: 30%;
+			height: 150px;
+			background: yellow;
+			margin-bottom: 5%;
+			text-align: center;
+		}
+		.box02 a{
+			color: white;
+		}
+		.material-icons{
+			font-size: 100px;
+			padding-top: 28px;
+		}
+		.box03{
+			float: left;
+			width: 30%;
+			height: 330px;
+			background: pink;
+		}
+		.title03 h2{
+			font-family: 'Noto Sans TC', sans-serif;
+			font-size: 1.5em;
+			padding: 0.5em 1em;
+		}
+		.title03 p{
+			padding: 0.5em 1.5em;
+		}
+		.box04{
+			float: left;
+			width: 30%;
+			height: 150px;
+			margin-left: 5%;
+			background: green;
+			margin-bottom: 5%;
+			text-align: center;
+		}
+		.box04 a{
+			color: white;
+		}
+		.box05{
+			float: right;
+			width: 30%;
+			height: 150px;
+			background: gray;
+			margin-bottom: 5%;
+			text-align: center;
+		}
+		.box05 a{
+			color: white;
+		}
+		.box06{
+			float: right;
+			width: 65%;
+			height: 150px;
+			background: purple;
+		}
+		.box06 a{
+			color: white;
+		}
+		#box06L{
+			float: left;
+			display: inline;
+			width: 30%;
+		}
+		#box06R{
+			float: left;
+			display: inline;
+			margin: 30px 0 20px 100px;
+		}
+		#box06R h3{
+			float: left;
+		}
+		#box06R p{
+			float: left;
+		}
+		.clearfix{
+			clear: both;
+		}
+
 	</style>
 </head>
 <body>
 	<div class="wrap">
-		<div class="yellowBox">
-			<div class="box" id="box01"></div>
-			<div class="box" id="box02"></div>
-			<div class="box" id="box03"></div>
-			<div class="box" id="box04"></div>
-			<div class="box" id="box05"></div>
-			<div class="box" id="box06"></div>
-			<div class="box" id="box07"></div>
-			<div class="box" id="box08"></div>
-			<div class="box" id="box09"></div>
-			<div class="box" id="box10"></div>
-			<div class="box" id="box11"></div>
+		<div class="box01">
+			<h1>Create Your Resume</h1>
+			<div class="btnStart">製作履歷</div>
+		</div>
+		<div class="box02">
+			<a href="#">
+				<i class="material-icons">account_circle</i>
+			</a>
+		</div>
+		<div class="box03">
+			<div class="title03">
+				<h2>一頁式履歷</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in repre</p>
+			</div>
+		</div>
+		<div class="box04">
+			<a href="#">
+				<i class="material-icons">help</i>
+			</a>
+		</div>
+		<div class="box05">
+			<a href="#">
+				<i class="material-icons">remove_red_eye</i>
+			</a>
+		</div>
+		<div class="box06">
+			<div id="box06L">
+				<a href="#">
+					<i class="material-icons">description</i>
+				</a>
+			</div>
+			<div id="box06R">
+				<ul>
+					<li>
+						<h3>+</h3>
+						<p>flower pink CV</p>
+					</li>
+					<li>
+						<h3>+</h3>
+						<p>funny CV</p>
+					</li>
+					<li>
+						<h3>+</h3>
+						<p>Engineer CV</p>
+					</li>
+				</ul>
+			</div>
+
 		</div>
 	</div>
+	<div class="clearfix"></div>
 </body>
 </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Aldrich|Changa|Julius+Sans+One|Michroma" rel="stylesheet">
+	<style type="text/css">
+	body{
+		background: gray;
+	}
+	.wrap{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.yellowBox{
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.box{
+		float: left;
+			width: 33%;
+			border: 2px dashed #FFCF0D;
+			box-sizing: border-box;
+	}
+	#box01,#box07{
+		height: 300px;
+		border: none;
+	}
+	#box06,#box10{
+		height: 300px;
+	}
+	
+	#box02,#box05{
+		height: 150px;
+		border: none;
+	}
+	#box03,#box04,#box08,#box09{
+		height: 150px;
+	}
+	#box10,#box09{
+		border-top: none;
+	}
+	#box09{
+		border-bottom: none;
+	}
+	#box11{
+		width: 66%;
+		border: none;
+		border-top: 2px dashed #FFCF0D;
+	}
+	#box01 h1{
+		font-size: 4em;
+		box-sizing: border-box;
+		font-family: 'Julius Sans One', sans-serif;
+		color: white;
+		margin: 0 auto;
+		line-height: 1.2em;
+	}
+	#box03 a{
+		position: relative;
+		top: 12px;
+		font-size: 110px;
+		box-sizing: border-box;
+		font-family: 'Michroma', sans-serif;
+		color: white;
+		text-decoration: none;
+		padding: 0 115px;
+	}
+	.clearfix{
+		clear: both;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="yellowBox">
+			<div class="box" id="box01">
+				<h1>Create Your Resume</h1>
+			</div>
+			<div class="box" id="box02"></div>
+			<div class="box" id="box03">
+				<a href="#">?</a>
+			</div>
+			<div class="box" id="box04">
+				<img src="img/flower.png">
+			</div>
+			<div class="box" id="box05"></div>
+			<div class="box" id="box06"></div>
+			<div class="box" id="box07"></div>
+			<div class="box" id="box08"></div>
+			<div class="box" id="box09"></div>
+			<div class="box" id="box10"></div>
+			<div class="box" id="box11"></div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</body>
+</html>
