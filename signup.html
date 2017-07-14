@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>SignUp</title>
+	<title>signup</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<style type="text/css">
 		body{
 			background: #2C91D0;
@@ -25,9 +26,33 @@
 			background: white;
 			border-radius: 5px;
 			width: 500px;
-			height: 30em;
+			height: 42em;
 			border: 2px solid #1D224A;
 			box-sizing: border-box;
+		}
+		.fb{
+			margin-top: 20px;
+			margin-left:100px;
+			padding-top: 25px;
+			border-radius: 5px;
+			float: left;
+			width: 25%;
+			height: 2.5em;
+			background: #547BBD;
+			text-align: center;
+			color: white;
+		}
+		.google{
+			margin-top: 20px;
+			padding-top: 25px;
+			margin-right:100px;
+			border-radius: 5px;
+			float: right;
+			width: 25%;
+			height: 2.5em;
+			background: #E9644A;
+			text-align: center;
+			color: white;
 		}
 		.formAll label{
 			display: block;
@@ -47,6 +72,9 @@
 			position: relative;
 			left: 240px;
 			font-family: 'Lato', sans-serif;
+		}
+		input:focus{
+			background: #E9644A;
 		}
 		.formAll input{
 			display: block;
@@ -70,6 +98,7 @@
 			padding: 15px 0 5px 0;
 			font-family: 'Lato', sans-serif;
 			width: 296px;
+			border-radius:0 0 5px 5px;
 		}
 		legend h1 {
 			font-family: 'Lato', sans-serif;
@@ -85,7 +114,7 @@
 		.remember{
 			display: inline;
 			position: relative;
-			top: -12px;
+			top: -15px;
 			font-weight: normal;
 		}
 		.new{
@@ -114,6 +143,17 @@
 			top: -14px;
 			position: relative;
 		}
+		#or{
+			left: 222px;
+			width: 30px;
+			text-align: center;
+		}
+		.toSignIn p{
+			
+		}
+		.clearfix{
+			clear: both;
+		}
 	</style>
 </head>
 <body>
@@ -123,23 +163,30 @@
 		</div>
 		<form>
 			<fieldset>
-				<legend><h1>Sign in</h1></legend>
+				<legend><h1>Sign up</h1></legend>
+				<a href="#"><div class="fb">
+					<i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+				</div></a>
+				<a href="#"><div class="google">
+					<i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+				</div></a>
+				<div class="clearfix"></div>
+				<div class="new">
+					<h5 id="or">Or</h5>
+				</div>
+				<label>Your name</label>
+				<input type="text" name="name">
 				<label>Email</label>
 				<input type="email" name="email">
 				<label id="password">Password</label>
-				<div class="forget">Forgot your password?</div>
 				<input type="password" name="password">
-				<input type="submit" value="sign in" id="submit" value="Sign in">
-				<label>
-				<input type="checkbox" name="remember" id="checkbox">
-				<span class="remember">remember me</span>
-				</label>
-				<div class="new">
-					<h5>New To EasyCV?</h5>
+				<label id="password">Re-enter password</label>
+				<input type="password" name="password">
+				<input type="submit" id="submit" value="Create your EasyCV account">
+				<div class="toSignIn">
+					<p>Already have an account?</p>
+					<a>Sign in</a>
 				</div>
-				<span>
-					<input type="button" name="signup" value="Create your EasyCV account">
-				</span>
 			</fieldset>
 		</form>
 	</div>
