@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato" rel="stylesheet">
+	<style type="text/css">
+		body{
+			background: #1D224A;
+			background: -webkit-linear-gradient(90deg, #2C91D0, #1D224A); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(90deg, #2C91D0, #1D224A); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(90deg, #2C91D0, #1D224A); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(90deg, #2C91D0, #1D224A); /* Standard syntax */
+		}
+		.formAll{
+			margin: 0 auto;
+			width: 1000px;
+		}
+		.formAll form{
+			margin: 0 auto;
+			background: white;
+			width: 300px;
+			height: 13em;
+			border: 2px solid #1D224A;
+			box-sizing: border-box;
+		}
+		.formAll input{
+			display: block;
+			font-family: 'Lato', sans-serif;
+			width: 60%;
+			margin: 10px auto;
+			border: none;
+			border-bottom: 2px solid #1D224A;
+			background: none;
+		}
+		#submit{
+			border-bottom: none;
+			border: 1px dashed #1D224A;
+		}
+		.formAll textarea{
+			display: block;
+			width: 60%;
+			margin: 10px auto;
+			border: none;
+			border-bottom: 2px solid #1D224A;
+		}
+		legend {
+			color: white;
+			background: #1D224A;
+			margin: 0 auto;
+			padding: 15px 0 5px 0;
+			font-family: 'Lato', sans-serif;
+			width: 296px;
+		}
+		legend h1 {
+			font-family: 'Julius Sans One', sans-serif;
+			color: white;
+			font-size: 3em;
+		}
+	</style>
+</head>
+<body>
+	<div class="formAll">
+		<form>
+			<fieldset>
+				<legend><h1>EasyCV</h1></legend>
+				<input type="text" name="userName" placeholder="userName">
+				<input type="email" name="email" placeholder="email">
+				<textarea placeholder="Type some messenge to us..."></textarea>
+				<input type="submit" value="submit" id="submit">
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

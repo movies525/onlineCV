@@ -6,23 +6,86 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
-      <!-- @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css); -->
+      <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
+    <script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+	</script>
 	<style type="text/css">
 		body{
-			background: #265B78;
+			background: #1D224A;
+			background: -webkit-linear-gradient(90deg, #2C91D0, #1D224A); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(90deg, #2C91D0, #1D224A); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(90deg, #2C91D0, #1D224A); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(90deg, #2C91D0, #1D224A); /* Standard syntax */
+		}
+		/*header*/
+		header{
+			width: 100%;
+			background: rgba(255,255,255,0.5);
+			height: 4em;
+			border-bottom: 5px solid white;
+		}
+		.headerLeft{
+			float: left;
+			width: 20%;
+		}
+		.headerRight{
+			float: right;
+			width: 20%;
+		}
+		.bigLogo{
+			float: left;
+			font-family: 'Julius Sans One', sans-serif;
+			color: white;
+			font-size: 3em;
+			padding: 10px;
+		}
+		.headerRight li{
+			float: left;
+			margin: 10px 0;
+			/*width: 3em;*/
+		}
+		.headerRight a{
+			position: relative;
+			display: table-cell;
+			vertical-align: bottom;
+			border-left: 1px solid white;
+		    border-right: none;
+		    text-decoration: none;
+		    color: #eeeeee;
+		    line-height: 30px;
+		    height: 40px;
+		    padding:0 20px 0 2px ;
+		    font-family: 'Lato', sans-serif;
+		    width: 100%;
+		}
+		.headerRight a:hover{
+			background: white;
+			color: #1D224A;
+			font-weight: bold;
 		}
 		.wrap{
 			width: 600px;
-			margin: 50px auto;
+			margin: 30px auto;
 		}
 		.box01{
+			box-sizing: border-box;
+			border: 1px solid rgba(255,255,255,0.7);
 			float: left;
 			width: 65%;
 			height: 150px;
-			background: black;
+			background: rgba(255,255,255,0.2);
 			margin-bottom: 5%;
+		}
+		.box01:hover,.box02:hover,.box03:hover,.box04:hover
+		,.box05:hover,.box06:hover{
+    -webkit-box-shadow: 0 0 20px white;
+       -moz-box-shadow: 0 0 20px white;
+            box-shadow: 0 0 20px white;
+		    background: rgba(255,255,255,0.3);
 		}
 		.box01 h1{
 			color: white;
@@ -30,28 +93,55 @@
 			font-weight: bold;
 			font-size: 1.8em;
 			text-align: center;
-			padding: 1em 0;
+			padding: 1em 0 0.5em 0;
 		}
 		.btnStart{
-			background: white;
+			border: 2px solid white;
+			color: white;
 			font-size: 1.5em;
-			/*font-family: 'Julius Sans One', sans-serif;*/
-			/*border: 2px solid white;*/
 			font-family: 'Noto Sans TC', sans-serif;
 			width: 25%;
-			padding: 0.25em 0.5em;
+			padding: 0.5em 1em;
 			text-align: center;
 			position: relative;
-			left: 130px;
+			left: 120px;
 			border-radius: 10px;
 			cursor: pointer;
+			z-index: 1;
 		}
 
+
+		.btnStart:after {
+		  position: absolute;
+		  content: "";
+		  width: 100%;
+		  height: 0;
+		  bottom: 0;
+		  left: 0;
+		  z-index: -1;
+		  background: white;
+		  transition: all 0.3s ease;
+		  border-radius: 10px;
+		}
+		.btnStart:hover {
+		  color: #2C91D0;
+		}
+		.btnStart:hover:after {
+		  top: 0;
+		  height: 100%;
+		}
+		.btnStart:active {top: 2px;}
+
+
+
+
 		.box02{
+			box-sizing: border-box;
+			border: 1px solid rgba(255,255,255,0.7);
 			float: right;
 			width: 30%;
 			height: 150px;
-			background: yellow;
+			background: rgba(255,255,255,0.2);
 			margin-bottom: 5%;
 			text-align: center;
 		}
@@ -63,25 +153,31 @@
 			padding-top: 28px;
 		}
 		.box03{
+			box-sizing: border-box;
+			border: 1px solid rgba(255,255,255,0.7);
 			float: left;
 			width: 30%;
 			height: 330px;
-			background: pink;
+			background: rgba(255,255,255,0.2);
 		}
 		.title03 h2{
 			font-family: 'Noto Sans TC', sans-serif;
 			font-size: 1.5em;
 			padding: 0.5em 1em;
+			color: white;
 		}
 		.title03 p{
 			padding: 0.5em 1.5em;
+			color: white;
 		}
 		.box04{
+			box-sizing: border-box;
+			border: 1px solid rgba(255,255,255,0.7);
 			float: left;
 			width: 30%;
 			height: 150px;
 			margin-left: 5%;
-			background: green;
+			background: rgba(255,255,255,0.2);
 			margin-bottom: 5%;
 			text-align: center;
 		}
@@ -89,10 +185,12 @@
 			color: white;
 		}
 		.box05{
+			box-sizing: border-box;
+			border: 1px solid rgba(255,255,255,0.7);
 			float: right;
 			width: 30%;
 			height: 150px;
-			background: gray;
+			background: rgba(255,255,255,0.2);
 			margin-bottom: 5%;
 			text-align: center;
 		}
@@ -100,10 +198,12 @@
 			color: white;
 		}
 		.box06{
+			box-sizing: border-box;
+			border: 1px solid rgba(255,255,255,0.7);
 			float: right;
 			width: 65%;
 			height: 150px;
-			background: purple;
+			background: rgba(255,255,255,0.2);
 		}
 		.box06 a{
 			color: white;
@@ -111,26 +211,154 @@
 		#box06L{
 			float: left;
 			display: inline;
-			width: 30%;
+			width: 20%;
 		}
 		#box06R{
 			float: left;
-			display: inline;
 			margin: 30px 0 20px 100px;
 		}
-		#box06R h3{
-			float: left;
-		}
 		#box06R p{
-			float: left;
+			float: right;
+			color: white;
+			font-size: 1.3em;
+			padding: 0.3em 0;
+			font-family: 'Julius Sans One', sans-serif;
 		}
 		.clearfix{
 			clear: both;
+		}
+		footer{
+			border-top: 1px solid white;
+			width: 100%;
+			height: 13em;
+			background: rgba(255,255,255,0.5);
+			margin-top: 20px;
+			position: relative;
+		}
+		.footerLeft{
+			float: left;
+		}
+		.footerLeft:after{
+			content: "";
+			position: absolute;
+			border: 1px solid white;
+			top: 25px;
+			bottom: 50px;
+			left: 400px;
+		}
+		.footerLeft h2{
+			display: inline;
+			font-size: 3.5em;
+			color: #1D224A;
+			position: relative;
+			top: 45px;
+			left: 20px;
+			font-family: 'Julius Sans One', sans-serif;
+		}
+		.footerLeft p{
+			display: inline;
+			position: relative;
+			left: 20px;
+			top: 42px;
+			color: white;
+			font-family: 'Lato', sans-serif;
+		}
+		.footerMiddle{
+			float: left;
+		}
+		.footerMiddle:after{
+			content: "";
+			position: absolute;
+			border: 1px solid white;
+			top: 25px;
+			bottom: 50px;
+			left: 585px;
+		}
+		.footerMiddle ul{
+			position: relative;
+			left: 80px;
+			top: 15px;
+			padding: 10px 0;
+		}
+		.footerMiddle p{
+			position: relative;
+			top: -6px;
+			display: inline;
+			font-family: 'Lato', sans-serif;
+		}
+		#smallIcon{
+			font-size: 1.5em;
+			padding-top: 0px;
+			color: #1D224A;
+		}
+
+		/*form contact me*/
+		.footerRight{
+			float: right;
+		}
+		.footerRight form{
+			position: relative;
+			right: 100px;
+			background: white;
+			width: 300px;
+			height: 13em;
+			border: 2px solid #1D224A;
+			box-sizing: border-box;
+		}
+		.footerRight input{
+			display: block;
+			font-family: 'Lato', sans-serif;
+			width: 60%;
+			margin: 10px auto;
+			border: none;
+			border-bottom: 2px solid #1D224A;
+			background: none;
+		}
+		#submit{
+			border-bottom: none;
+			border: 1px dashed #1D224A;
+		}
+		.footerRight textarea{
+			display: block;
+			width: 60%;
+			margin: 10px auto;
+			border: none;
+			border-bottom: 2px solid #1D224A;
+		}
+		legend {
+			color: white;
+			background: #1D224A;
+			margin: 0 auto;
+			padding: 15px 0 5px 0;
+			font-family: 'Lato', sans-serif;
+			width: 296px;
+		}
+		legend p {
+			padding: 0 10px;
 		}
 
 	</style>
 </head>
 <body>
+<header>
+	<div class="headerLeft">
+		<div class="bigLogo">
+			<h1>EasyCV</h1>
+		</div>
+	</div>
+		
+	<div class="headerRight">
+		<ul>
+			<li>
+				<a href="#">Login</a>
+			</li>
+			<li>
+				<a href="#">SignUp</a>
+			</li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+</header>
 	<div class="wrap">
 		<div class="box01">
 			<h1>Create Your Resume</h1>
@@ -169,16 +397,13 @@
 			<div id="box06R">
 				<ul>
 					<li>
-						<h3>+</h3>
-						<p>flower pink CV</p>
+						<p>+flower pink CV</p>
 					</li>
 					<li>
-						<h3>+</h3>
-						<p>funny CV</p>
+						<p>+funny CV</p>
 					</li>
 					<li>
-						<h3>+</h3>
-						<p>Engineer CV</p>
+						<p>+Engineer CV</p>
 					</li>
 				</ul>
 			</div>
@@ -186,5 +411,44 @@
 		</div>
 	</div>
 	<div class="clearfix"></div>
+	<footer>
+		<div class="footerLeft">
+			<h2>EasyCV</h2>
+			<p>© copyRight Apo Liao</p>
+		</div>
+		<div class="footerMiddle">
+			<ul>
+				<li>
+					<i class="material-icons" id="smallIcon">account_circle</i>
+					<p>Accout</p>
+				</li>
+				<li>
+					<i class="material-icons" id="smallIcon">help</i>
+					<p>Help document</p>
+				</li>
+				<li>
+					<i class="material-icons" id="smallIcon">remove_red_eye</i>
+					<p>Collection</p>
+				</li>
+				<li>
+					<i class="material-icons" id="smallIcon">description</i>
+					<p>Cv list</p>
+				</li>
+			</ul>
+		</div>
+		<div class="footerRight">
+			<form>
+				<fieldset>
+					<legend><p>Contact Us</p></legend>
+					<input type="text" name="userName" placeholder="userName">
+					<input type="email" name="email" placeholder="email">
+					<textarea placeholder="Type some messenge to us..."></textarea>
+					<input type="submit" value="submit" id="submit">
+				</fieldset>
+			</form>
+		</div>
+	</footer>
+	<script>
+	</script>
 </body>
 </html>
