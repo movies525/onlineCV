@@ -15,6 +15,7 @@
 		/*左邊*/
 		#logo{
 			cursor: pointer;
+			padding-left: 1em;
 		}
 
 		.photo img{
@@ -29,6 +30,7 @@
 			position: relative;
 			/*list-style-image: url("../img/flowerBg.jpg");*/
 			background-image: url("../img/flowerBg.jpg");
+			font-family: 'Noto Sans TC', sans-serif;
 			/*background:url("..img/flowerBg.jpg") no-repeat;*/
 		}
 		.wrapInside{
@@ -46,15 +48,15 @@
 		}
 		.leftTitle{
 			float: left;
-			width: 35%;
+			width: 37%;
 			margin-bottom: 0.5em;
 			font-weight: bold;
 		}
 		.leftContent{
 			float: left;
-			width: 55%;
+			width: 53%;
 			margin-bottom: 0.5em;
-			padding-left:10%;
+			padding-left:8%;
 		}
 		.phone{
 			margin-bottom: 0.5em;
@@ -101,6 +103,15 @@
 			left: -77.5px;
 			text-align: center;
 		}
+		.experience{
+			position: relative;
+		}
+		.experience li {
+			padding-bottom: 10px;
+		}
+		.education li{
+			padding-bottom: 10px;
+		}
 		.right{
 			position: absolute;
 			left: 30%;
@@ -136,6 +147,9 @@
 			left: -77.5px;
 			text-align: center;
 		}
+		.skills{
+			position: relative;
+		}
 		.skills li {
 			float: left;
 			width: 50%;
@@ -164,16 +178,6 @@
 			background-position: 0 20px;
 		}
 		/*achievement*/
-		div .achievement:before{
-			content: "";
-			position: absolute;
-			width: 20px;
-			height:20px;
-			border-radius: 50%;
-			background: #E80C7A;
-			left: -77.5px;
-			text-align: center;
-		}
 		div .achievement:after{
 			content: "";
 			position: absolute;
@@ -188,7 +192,35 @@
 		.achievement{
 			position: relative;
 		}
-		.toolbar{
+		.toolbarAch{
+			position: absolute;
+			height: 50px;
+			width: 35px;
+			left: -50px;
+			top: 30px;
+			padding: 5px 0;
+			border: 3px solid #E80C7A;
+			border-radius:10px;
+			text-align: center;
+			color: #E80C7A;
+			display: none;
+			cursor: pointer;
+		}
+		.toolbarSk{
+			position: absolute;
+			height: 50px;
+			width: 35px;
+			left: -50px;
+			top: 30px;
+			padding: 5px 0;
+			border: 3px solid #E80C7A;
+			border-radius:10px;
+			text-align: center;
+			color: #E80C7A;
+			display: none;
+			cursor: pointer;
+		}
+		.toolbarExp{
 			position: absolute;
 			height: 50px;
 			width: 35px;
@@ -205,12 +237,19 @@
 		.achievement li{
 			float: left;
 			width: 50%;
+			padding-bottom: 10px;
 		}
 		.achTitle {
 			font-weight: bold;
 		}
 		.clearfix{
 			clear: both;
+		}
+		.fontChinese{
+			font-family: 'Noto Sans TC', sans-serif;
+		}
+		.lineHeight{
+			line-height: 1.2em;
 		}
 @media print {
 .wrap {

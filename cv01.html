@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/cv01Style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.min.js"
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -17,6 +18,7 @@
 	<div class="wrap">
 		<div class="wrapInside">
 			<div class="left">
+			<button onclick="PrintElem('body')" id="printbtn">print</button>
 				<div class="photo">
 					<label id="logo"><img src="img/100px.png" id="img">
 						<input type="file" style="display: none;"  id="input" accept="image/*"
@@ -35,9 +37,9 @@
 							</div>
 						</li>
 						<li>
-							<div class="leftTitle" contenteditable="true">性別:</div>
+							<div class="leftTitle fontChinese" contenteditable="true">性別:</div>
 							<div class="leftContent" contenteditable="true">
-								<p>女</p>
+								<p class="fontChinese">女</p>
 							</div>
 						</li>
 						<li>
@@ -76,7 +78,7 @@
 			<div class="right">
 				<div class="aboutMe">
 					<h2 contenteditable="true">ABOUT ME</h2>
-					<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					<p contenteditable="true" class="lineHeight">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -105,6 +107,11 @@
 				</div>
 				<div class="experience">
 					<h2 contenteditable="true">EXPERIENCE</h2>
+					<div class="toolbarExp">
+					<i class="material-icons addExp">add_circle</i>
+					<i class="material-icons delete">remove_circle</i>
+
+					</div>
 						<ul>
 							<li>
 								<div class="year" contenteditable="true">04-05</div>
@@ -120,17 +127,24 @@
 									<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tempore autem consequuntur expedita</p>
 								</div>
 							</li>
-							<li>
-								<div class="year" contenteditable="true">10-17</div>
-								<div class="school">
-									<h5 contenteditable="true">Company Name</h5>
-									<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tempore autem consequuntur expedita</p>
-								</div>
-							</li>
+							<div id="experience1">
+								<li>
+									<div class="year" contenteditable="true">10-17</div>
+									<div class="school">
+										<h5 contenteditable="true">Company Name</h5>
+										<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tempore autem consequuntur expedita</p>
+									</div>
+								</li>
+							</div>
 						</ul>
 
 				</div>
 				<div class="skills">
+				<div class="toolbarSk">
+					<i class="material-icons addSkills">add_circle</i>
+					<i class="material-icons delete">remove_circle</i>
+
+				</div>
 					<h2 contenteditable="true">SKILLS</h2>
 						<ul>
 							<li>
@@ -193,32 +207,34 @@
 									<div class="star"></div>
 								</div>
 							</li>
-							<li>
-								<div class="skillsTitle" contenteditable="true">JQUERY</div>
-								<div class="score" contenteditable="false">
-									<div class="star"></div>
-									<div class="star"></div>
-									<div class="star"></div>
-									<div class="star"></div>
-									<div class="star"></div>
-								</div>
-							</li>
-							<li>
-								<div class="skillsTitle" contenteditable="true">AUTOCAD</div>
-								<div class="score" contenteditable="false">
-									<div class="star"></div>
-									<div class="star"></div>
-									<div class="star"></div>
-									<div class="star"></div>
-									<div class="star"></div>
-								</div>
-							</li>
+							<div id="skill1">
+								<li>
+									<div class="skillsTitle" contenteditable="true">JQUERY</div>
+									<div class="score" contenteditable="false">
+										<div class="star"></div>
+										<div class="star"></div>
+										<div class="star"></div>
+										<div class="star"></div>
+										<div class="star"></div>
+									</div>
+								</li>
+								<li>
+									<div class="skillsTitle" contenteditable="true">AUTOCAD</div>
+									<div class="score" contenteditable="false">
+										<div class="star"></div>
+										<div class="star"></div>
+										<div class="star"></div>
+										<div class="star"></div>
+										<div class="star"></div>
+									</div>
+								</li>
+							</div>
 						</ul>
 						<div class="clearfix"></div>
 
 				</div>
 				<div class="achievement">
-				<div class="toolbar">
+				<div class="toolbarAch">
 					<i class="material-icons add">add_circle</i>
 					<i class="material-icons delete">remove_circle</i>
 
@@ -238,9 +254,6 @@
 					</ul>
 					<div class="clearfix"></div>
 				</div>
-				<button onclick="PrintElem('body')">print</button>
-				<input type="button" name="123" class="button" value="X">
-				<!-- <button class="add">增加區塊</button> -->
 
 			</div>
 		</div>
@@ -297,9 +310,12 @@
 
         //列印
         function PrintElem(elem){
+        	$('#printbtn').remove();
         Popup($('<div/>').append($(elem).clone()).html());
+
     	};
         function Popup(data) {
+
 	      var mywindow = window.open('', 'new div', 'height=400,width=600');
 	      mywindow.document.write('<html><head><title></title>');
 	      mywindow.document.write('<link rel="stylesheet" href="css/cv01Style.css" type="text/css" media="print"/>');
@@ -313,9 +329,30 @@
 
 	      return true;
 		};
-		//加入區塊
+		//加入區塊 experience
+		$(document).on("click",".addExp",function(e){
+			// get the last DIV which ID starts with ^= "award"
+			var $div = $('div[id^="experience"]:last');
+			var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
+			// Clone it and assign the new ID (i.e: from num 4 to ID "award4")
+			var $experience = $div.clone().prop('id', 'experience'+num );
+			// Finally insert $klon wherever you want
+			$div.after( $experience );
+
+		});
+		//加入區塊 SKILLS
+		$(document).on("click",".addSkills",function(e){
+			// get the last DIV which ID starts with ^= "award"
+			var $div = $('div[id^="skill"]:last');
+			var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
+			// Clone it and assign the new ID (i.e: from num 4 to ID "award4")
+			var $skill = $div.clone().prop('id', 'skill'+num );
+			// Finally insert $klon wherever you want
+			$div.after( $skill );
+
+		});
+		//加入區塊 ACHIEVEMENT
 		$(document).on("click",".add",function(e){
-			console.log('add');
 			// get the last DIV which ID starts with ^= "award"
 			var $div = $('div[id^="award"]:last');
 			var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
@@ -327,36 +364,36 @@
 		});
 		//刪除區塊
 		$(document).on('click',".delete",function(e){
-			
 			if(e.target.nodeName == 'DIV'){
 				var $div = $('div[id^="award"]:last');
 				$div.remove();
 				console.log("123");
 			}
 		});
-		// var photoClick = document.querySelector('.button');
-		// photoClick.addEventListener('click',function (e){
-		// 	// alert(e.target.nodeName);
-		// 	if (e.target.nodeName == 'INPUT') {
-		// 		var element = document.querySelector('.photo');
-		// 		element.remove();
-		// 	}
-		// },false);
 
-		//區塊focus
-		// $(".achTitle,.achP,.add,.achievement").focus(function(){
-		// 	$(".toolbar").css("display","block");
-		// });
-		// $(".achTitle,.achP,.add,.achievement").blur(function(){
-		// 	$(".toolbar").css("display","none");
-		// });
+		// toolbar顯示/不顯示 experience
+		$(document).on("click",".experience",function(e){
+			console.log(this.nodeName);
+			$(".toolbarExp").css("display","block");
+			setTimeout(function(){
+				$(".toolbarExp").css("display","none");
+			}, 6000);
+		});
 
-		// toolbar顯示/不顯示
+		// toolbar顯示/不顯示 achievement
 		$(document).on("click",".achievement",function(e){
 			console.log(this.nodeName);
-			$(".toolbar").css("display","block");
+			$(".toolbarAch").css("display","block");
 			setTimeout(function(){
-				$(".toolbar").css("display","none");
+				$(".toolbarAch").css("display","none");
+			}, 6000);
+		});
+		// toolbar顯示/不顯示 skill
+		$(document).on("click",".skills",function(e){
+			console.log(this.nodeName);
+			$(".toolbarSk").css("display","block");
+			setTimeout(function(){
+				$(".toolbarSk").css("display","none");
 			}, 6000);
 		});
 
