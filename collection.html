@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>collection</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+	</script>
+	<style type="text/css">
+		body{
+			background: #ededed;
+			/*background: -webkit-linear-gradient(90deg, #2C91D0, #1D224A); /* For Safari 5.1 to 6.0 */*/
+			/*background: -o-linear-gradient(90deg, #2C91D0, #1D224A); /* For Opera 11.1 to 12.0 */*/
+			/*background: -moz-linear-gradient(90deg, #2C91D0, #1D224A); /* For Firefox 3.6 to 15 */*/
+			/*background: linear-gradient(90deg, #2C91D0, #1D224A); /* Standard syntax */*/
+		}
+		/*header*/
+
+		header{
+			width: 100%;
+			background: #a9a9a9;
+			height: 4em;
+			border-bottom: 5px solid white;
+		}
+		.headerLeft{
+			float: left;
+			width: 50%;
+		}
+		.headerRight{
+			float: right;
+			width: 20%;
+		}
+		.bigLogo{
+			float: left;
+			font-family: 'Julius Sans One', sans-serif;
+			color: #1D224A;
+			font-size: 3em;
+			padding: 10px;
+		}
+		.left{
+			float: left;
+			width: 35%;
+			height: 60px;
+		}
+		.left ul{
+			position: relative;
+			left: 50px;
+		}
+		.left li{
+			float: left;
+			width: 50%;
+			margin: 10px 0;
+		}
+		.left a{
+			position: relative;
+			display: table-cell;
+			vertical-align: bottom;
+			border-left: 1px solid white;
+		    border-right: none;
+		    text-decoration: none;
+		    color: #eeeeee;
+		    line-height: 30px;
+		    height: 40px;
+		    padding:0 20px 0 2px ;
+		    font-family: 'Lato', sans-serif;
+		    width: 100%;
+		}
+		.headerRight li{
+			float: left;
+			margin: 10px 0;
+			/*width: 3em;*/
+		}
+		.headerRight a{
+			position: relative;
+			display: table-cell;
+			vertical-align: bottom;
+			border-left: 1px solid white;
+		    border-right: none;
+		    text-decoration: none;
+		    color: #eeeeee;
+		    line-height: 30px;
+		    height: 40px;
+		    padding:0 20px 0 2px ;
+		    font-family: 'Lato', sans-serif;
+		    width: 100%;
+		}
+		.headerRight a:hover{
+			background: white;
+			color: #1D224A;
+			font-weight: bold;
+		}
+		.clearfix{
+			clear: both;
+		}
+		/*main左邊*/
+		.main-left{
+			float: left;
+			width: 20%;
+			background: #1D224A;
+			color: white;
+			padding-top: 20px;
+			padding: 15px;
+			box-sizing: border-box;
+			height: 800px;
+		}
+		.main-left li {
+			line-height: 25px;
+		}
+		i{
+			position: relative;
+			top: 5px;
+			padding-right: 10px;
+		}
+
+		.pic img{
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			padding: 0 69.9px;
+		}
+		.pic h1{
+			font-weight: bold;
+			padding: 20px 0;
+			text-align: center;
+		}
+		.left-top{
+			padding: 20px 0;
+		}
+		.left-middle{
+			padding: 20px 0;
+		}
+		/*main右邊*/
+		.main-right{
+			margin-right: 120px;
+			padding-top: 100px;
+		}
+		.main-right h1{
+			margin-left: 350px;
+			font-family: 'Noto Sans TC', sans-serif;
+			font-size: 1.5em;
+		}
+		.box{
+			float: right;
+			width: 280px;
+			height: 280px;
+			margin: 10px;
+			background: #FFFFFF;
+			border-radius: 5px;
+			border: #D4D4D4 1px solid;
+			-webkit-box-shadow: 0 0 20px #D4D4D4;
+       		-moz-box-shadow: 0 0 20px #D4D4D4;
+            box-shadow: 2px 2px 10px #D4D4D4;
+		}
+		.text{
+			padding: 30px 0 10px 30px;
+			line-height: 1.2em;
+		}
+		.box h2{
+			color: #1D224A;
+			font-family: '微軟正黑體';
+		}
+		.box p{
+			/*line-height: 1.1em;*/
+			color: #A3A3A3;
+			font-family: 'Lato', sans-serif;
+			font-size: 0.9em;
+		}
+		.tag{
+			position: relative;
+			top: 20px;
+			padding: 5px;
+			color: white;
+			border-radius: 0 4px 4px 0;
+		}
+		.tag-hot{
+			background: #CC0500;
+		}
+		.tag-new{
+			background: #E8810C;
+		}
+		.review{
+			margin: 0 25px;
+			border: 1px dashed #D4D4D4;
+			width: 80%;
+			height: 100px;
+		}
+		.btn{
+			width: 50px;
+			height: 50px;
+			border-radius: 5px;
+			text-align: center;
+			box-sizing: border-box;
+			padding-top: 8px;
+			cursor: pointer;
+		}
+		.btn-copy{
+			position: relative;
+			display: inline-block;
+			background: #71D47C;
+			left: 145px;
+			top: 12px;
+		}
+		.btn-heart{
+			position: relative;
+			display: inline-block;
+			background: #E8B20C;
+			left: 150px;
+			top: 12px;
+		}
+		.more{
+			background: #1D224A;
+			width: 60px;
+			height: 30px;
+			color: white;
+			float: right;
+			margin-right: 415px ;
+			margin-top: 10px;
+			text-align: center;
+			font-family: 'Lato', sans-serif;
+			padding-top:10px;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		/*footer*/
+		footer{
+			border-top: 1px solid white;
+			width: 100%;
+			height: 5em;
+			background: #a9a9a9;
+			position: relative;
+		}
+		.footerLeft{
+			float: left;
+		}
+		.footerLeft p{
+			display: inline;
+			position: relative;
+			left: 20px;
+			top: 35px;
+			color: white;
+			font-family: 'Lato', sans-serif;
+		}
+		.footerMiddle{
+			float: right;
+		}
+		.footerMiddle ul{
+			position: relative;
+			top: 20px;
+			right: 10px;
+		}
+		.footerMiddle li{
+			display: inline-block;
+			padding: 15px;
+		}
+		.footerMiddle p{
+			display: inline;
+			font-family: 'Lato', sans-serif;
+		}
+		#smallIcon{
+			font-size: 1.5em;
+			padding-top: 0px;
+			color: #1D224A;
+		}
+	</style>
+</head>
+<body>
+	<header>
+	<div class="headerLeft">
+		<div class="bigLogo">
+			<h1>EasyCV</h1>
+		</div>
+	</div>
+	<div class="headerRight">
+		<ul>
+			<li>
+				<a href="#">Logout</a>
+			</li>
+			<li>
+				<a href="#">APO</a>
+			</li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+	</header>
+	<main>
+		<div class="main-left">
+			<div class="pic">
+				<img src="img/100px02.png">
+				<h1>APO LIAO</h1>
+			</div>
+			<hr>
+			<ul class="left-top">
+				<li><i class="material-icons">remove_red_eye</i>Collection</li>
+				<li><i class="material-icons">favorite_border</i>My Favorite</li>
+				<li><i class="material-icons">description</i>CV Manager</li>
+			</ul>
+			<hr>
+			<div class="left-middle">
+				<h2>Create CV<i class="material-icons" style="padding-left: 120px;font-size: 2.2em;">add_circle</i></h2>
+			</div>
+			<hr>
+			<div class="left-bottom">
+				<h2><i class="material-icons">help</i>Help Document</h2>
+			</div>
+		</div>
+		<div class="main-right">
+			<h1>履歷欣賞</h1>
+			<div class="box">
+				<span class="tag tag-new">New</span>
+				<div class="text">
+				<h2>新銳工程師履歷</h2>
+				<p>Created by APO LIAO</p>
+				</div>
+				<div class="review">
+				</div>
+				<div class="btn btn-copy">
+					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">content_copy</i>
+				</div>
+				<div class="btn btn-heart">
+					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
+				</div>
+			</div>
+			<div class="box">
+				<span class="tag tag-new">New</span>
+				<div class="text">
+				<h2>新銳工程師履歷</h2>
+				<p>Created by APO LIAO</p>
+				</div>
+				<div class="review">
+				</div>
+				<div class="btn btn-copy">
+					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">content_copy</i>
+				</div>
+				<div class="btn btn-heart">
+					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
+				</div>
+			</div>
+			<div class="box">
+				<span class="tag tag-new">New</span>
+				<div class="text">
+				<h2>新銳工程師履歷</h2>
+				<p>Created by APO LIAO</p>
+				</div>
+				<div class="review">
+				</div>
+				<div class="btn btn-copy">
+					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">content_copy</i>
+				</div>
+				<div class="btn btn-heart">
+					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
+				</div>
+			</div>
+			<div class="box">
+				<span class="tag tag-new">New</span>
+				<div class="text">
+				<h2>新銳工程師履歷</h2>
+				<p>Created by APO LIAO</p>
+				</div>
+				<div class="review">
+				</div>
+				<div class="btn btn-copy">
+					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">content_copy</i>
+				</div>
+				<div class="btn btn-heart">
+					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
+				</div>
+			</div>
+			<div class="box">
+				<span class="tag tag-hot">Hot</span>
+				<div class="text">
+				<h2>新銳工程師履歷</h2>
+				<p>Created by APO LIAO</p>
+				</div>
+				<div class="review">
+				</div>
+				<div class="btn btn-copy">
+					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">content_copy</i>
+				</div>
+				<div class="btn btn-heart">
+					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
+				</div>
+			</div>
+			<div class="box">
+				<span class="tag tag-new">New</span>
+				<div class="text">
+				<h2>新銳工程師履歷</h2>
+				<p>Created by APO LIAO</p>
+				</div>
+				<div class="review">
+				</div>
+				<div class="btn btn-copy">
+					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">content_copy</i>
+				</div>
+				<div class="btn btn-heart">
+					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
+				</div>
+			</div>
+			<!-- <div class="clearfix"></div> -->
+			<div class="more">more</div>
+		</div>
+		<div class="clearfix"></div>
+	</main>
+	<footer>
+		<div class="footerLeft">
+			<p>© copyRight Apo Liao</p>
+		</div>
+		<div class="footerMiddle">
+			<ul>
+				<li>
+					<i class="material-icons" id="smallIcon">account_circle</i>
+					<p>Accout</p>
+				</li>
+				<li>
+					<i class="material-icons" id="smallIcon">help</i>
+					<p>Help document</p>
+				</li>
+				<li>
+					<i class="material-icons" id="smallIcon">remove_red_eye</i>
+					<p>Collection</p>
+				</li>
+				<li>
+					<i class="material-icons" id="smallIcon">description</i>
+					<p>Cv list</p>
+				</li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>

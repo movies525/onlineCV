@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+	</script>
 <style type="text/css">
 		body{
 			background: #1D224A;
@@ -162,7 +167,6 @@
 			width: 30%;
 			padding:80px 0 0 20px;
 			box-sizing: border-box;
-			
 		}
 		.date{
 			float: right;
@@ -286,6 +290,113 @@
 		legend p {
 			padding: 0 10px;
 		}
+		/*更改密碼*/
+		#changeFrom{
+			position: absolute;
+			display: none;
+		}
+		.formAll{
+			margin: 0 auto;
+			width: 1000px;
+		}
+		.formAll form{
+			margin: 1em auto;
+			background: white;
+			border-radius: 5px;
+			width: 500px;
+			height: 42em;
+			border: 2px solid #1D224A;
+			box-sizing: border-box;
+		}
+		.formAll label{
+			display: block;
+			font-family: 'Lato', sans-serif;
+			font-weight: bold;
+			width: 90%;
+			height: 1em;
+			margin: 10px auto;
+		}
+		#password{
+			display: inline;
+			position: relative;
+			left: 24.797px;
+		}
+		.forget{
+			display: inline;
+			position: relative;
+			left: 240px;
+			font-family: 'Lato', sans-serif;
+		}
+		input:focus{
+			background: #E9644A;
+		}
+		.formAll input{
+			display: block;
+			font-size: 1em;
+			font-family: 'Lato', sans-serif;
+			width: 90%;
+			height: 2.5em;
+			margin: 10px auto;
+			border-radius: 5px;
+			padding: 2px 0;
+		}
+		#submit{
+			background: #1D224A;
+			color: white;
+			font-family: 'Lato', sans-serif;
+		}
+		legend {
+			color: white;
+			background: #1D224A;
+			margin: 0 auto;
+			padding: 15px 0 5px 0;
+			font-family: 'Lato', sans-serif;
+			width: 296px;
+			border-radius:0 0 5px 5px;
+		}
+		legend h1 {
+			font-family: 'Lato', sans-serif;
+			color: white;
+			font-size: 2em;
+			padding:0 0 5px 10px;
+		}
+		#checkbox{
+			display: inline;
+			position: relative;
+			width: 20px;
+		}
+		.remember{
+			display: inline;
+			position: relative;
+			top: -15px;
+			font-weight: normal;
+		}
+		.new{
+			padding-top: 40px;
+		}
+		.new h5{
+			font-family: 'Lato', sans-serif;
+			line-height: 1;
+			z-index: 2;
+			background-color: white;
+			left: 180px;
+			position: relative;
+			height: 10px;
+			width: 88px;
+			padding: 10px;
+			font-size: 2px;
+		}
+		.new:after{
+			content: "";
+			z-index: 1;
+			border-top:1px solid black;
+			width: 446.39px;
+			left: 24.797px;
+			height: 10px;
+			display: block;
+			top: -14px;
+			position: relative;
+		}
 </style>
 </head>
 
@@ -384,5 +495,41 @@
 			</form>
 		</div>
 	</footer>
+	<div id="changeFrom">
+		<div class="formAll">
+		<form>
+			<fieldset>
+				<legend><h1>帳戶管理</h1></legend>
+				<label>Your name</label>
+				<input type="text" name="name">
+				<label>Email</label>
+				<input type="email" name="email">
+				<label id="password">Password</label>
+				<input type="password" name="password">
+				<label id="password">Re-enter password</label>
+				<input type="password" name="password">
+				<input type="submit" id="submit" value="確定更新">
+			</fieldset>
+		</form>
+	</div>
+	</div>
+	<script src="js/modal.js"></script>
+	<script>
+		$(function()
+		{
+			// Create a modal instance.
+			var $m = $('body').modal(),
+
+			    // Access an instance API
+			    api = $m.data('modal');
+
+			// Bind a click event to copy a hidden elements content into the modal window
+			$(document).on('click', '.btn-edit', function()
+			{
+				api.open( document.getElementById('changeFrom').innerHTML );
+			});
+			
+		});
+	</script>
 </body>
 </html>
