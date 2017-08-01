@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>help document</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+	</script>
+	<script src="js/jquery-ui.min.js"></script>
+	<style type="text/css">
+		body{
+			background: #ededed;
+		}
+		/*header*/
+
+		header{
+			width: 100%;
+			background: #a9a9a9;
+			height: 4em;
+			border-bottom: 5px solid white;
+		}
+		.headerLeft{
+			float: left;
+			width: 50%;
+		}
+		.headerRight{
+			float: right;
+			width: 20%;
+		}
+		.bigLogo{
+			float: left;
+			font-family: 'Julius Sans One', sans-serif;
+			color: #1D224A;
+			font-size: 3em;
+			padding: 10px;
+		}
+		.left{
+			float: left;
+			width: 35%;
+			height: 60px;
+		}
+		.left ul{
+			position: relative;
+			left: 50px;
+		}
+		.left li{
+			float: left;
+			width: 50%;
+			margin: 10px 0;
+		}
+		.left a{
+			position: relative;
+			display: table-cell;
+			vertical-align: bottom;
+			border-left: 1px solid white;
+		    border-right: none;
+		    text-decoration: none;
+		    color: #eeeeee;
+		    line-height: 30px;
+		    height: 40px;
+		    padding:0 20px 0 2px ;
+		    font-family: 'Lato', sans-serif;
+		    width: 100%;
+		}
+		.headerRight li{
+			float: left;
+			margin: 10px 0;
+			/*width: 3em;*/
+		}
+		.headerRight a{
+			position: relative;
+			display: table-cell;
+			vertical-align: bottom;
+			border-left: 1px solid white;
+		    border-right: none;
+		    text-decoration: none;
+		    color: #eeeeee;
+		    line-height: 30px;
+		    height: 40px;
+		    padding:0 20px 0 2px ;
+		    font-family: 'Lato', sans-serif;
+		    width: 100%;
+		}
+		.headerRight a:hover{
+			background: white;
+			color: #1D224A;
+			font-weight: bold;
+		}
+		.clearfix{
+			clear: both;
+		}
+		/*main左邊*/
+		.main-left{
+			float: left;
+			width: 20%;
+			background: #1D224A;
+			color: white;
+			padding-top: 20px;
+			padding: 15px;
+			box-sizing: border-box;
+			height: 820px;
+			font-family: 'Lato', sans-serif;
+		}
+		.main-left li {
+			line-height: 25px;
+		}
+		i{
+			position: relative;
+			top: 5px;
+			padding-right: 10px;
+		}
+
+		.pic img{
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			padding: 0 69.9px;
+		}
+		.pic h1{
+			font-weight: bold;
+			padding: 20px 0;
+			text-align: center;
+		}
+		.left-top{
+			padding: 20px 0;
+		}
+		.left-middle{
+			padding: 20px 0;
+		}
+		/*main的右邊*/
+		.carousel{
+			width: 300px;
+			height: 300px;
+			background: red;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.togglePic img{
+			display: inline-block;
+		}
+		/*footer*/
+		footer{
+			border-top: 1px solid white;
+			width: 100%;
+			height: 5em;
+			background: #a9a9a9;
+			position: relative;
+		}
+		.footerLeft{
+			float: left;
+		}
+		.footerLeft p{
+			display: inline;
+			position: relative;
+			left: 20px;
+			top: 35px;
+			color: white;
+			font-family: 'Lato', sans-serif;
+		}
+		.footerMiddle{
+			float: right;
+		}
+		.footerMiddle ul{
+			position: relative;
+			top: 20px;
+			right: 10px;
+		}
+		.footerMiddle li{
+			display: inline-block;
+			padding: 15px;
+		}
+		.footerMiddle p{
+			display: inline;
+			font-family: 'Lato', sans-serif;
+		}
+		#smallIcon{
+			font-size: 1.5em;
+			padding-top: 0px;
+			color: #1D224A;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="headerLeft">
+			<div class="bigLogo">
+				<h1>EasyCV</h1>
+			</div>
+		</div>
+		<div class="headerRight">
+			<ul>
+				<li>
+					<a href="#">Logout</a>
+				</li>
+				<li>
+					<a href="#">APO</a>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</header>
+	<main>
+		<div class="main-left">
+			<div class="pic">
+				<img src="img/100px02.png">
+				<h1>APO LIAO</h1>
+			</div>
+			<hr>
+			<ul class="left-top">
+				<li><i class="material-icons">settings</i><a href="setting.html">Account Settings</a></li>
+			</ul>
+			<hr>
+			<div class="left-middle">
+			<ul>
+				<li><i class="material-icons">description</i><a href="cvManager.html">CV Manager</a></li>
+				<li><i class="material-icons">add_circle</i>Create CV</li>
+				<li><i class="material-icons">remove_red_eye</i><a href="collection.html">Collection</a></li>
+			</ul>
+
+			</div>
+			<hr>
+			<div class="left-bottom">
+				<h2><i class="material-icons">help</i>Help Document</h2>
+			</div>
+		</div>
+		<div class="main-right">
+			<h1>Help Document</h1>
+			<div class="carousel">
+				<div class="togglePic" id="toggle01"><img src="https://api.fnkr.net/testimg/300x300/00CED1/FFF/?text=img+placeholder"></div>
+				<div class="togglePic" id="toggle02"><img src="https://api.fnkr.net/testimg/300x300/00CED1/FFF/?text=img+placeholder"></div>
+				<div class="togglePic" id="toggle03"><img src="https://api.fnkr.net/testimg/300x300/00CED1/FFF/?text=img+placeholder"></div>
+				<div id="green"></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</main>
+	<footer>
+		<div class="footerLeft">
+			<p>© copyRight Apo Liao</p>
+		</div>
+		<div class="footerMiddle">
+			<ul>
+				<li>
+					<i class="material-icons" id="smallIcon">account_circle</i>
+					<p>Accout</p>
+				</li>
+				<li>
+					<i class="material-icons" id="smallIcon">help</i>
+					<p>Help document</p>
+				</li>
+				<li>
+					<i class="material-icons" id="smallIcon">remove_red_eye</i>
+					<p>Collection</p>
+				</li>
+				<li>
+					<i class="material-icons" id="smallIcon">description</i>
+					<p>Cv list</p>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<script>
+		$("#toggle01").click(function(){
+			$("#toggle01").toggle("slide");
+		});
+		$("#toggle02").click(function(){
+			$("#toggle02").toggle("slide");
+		});
+		$("#toggle03").click(function(){
+			$("#toggle03").toggle("slide");
+		});
+		$("#toggle03").click(function(){
+			$("#toggle01").toggle("slide");
+
+		});
+	</script>
+</body>
+</html>

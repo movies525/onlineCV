@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>collection</title>
+	<title>Account Settings</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -21,6 +21,10 @@
 			/*background: -o-linear-gradient(90deg, #2C91D0, #1D224A); /* For Opera 11.1 to 12.0 */*/
 			/*background: -moz-linear-gradient(90deg, #2C91D0, #1D224A); /* For Firefox 3.6 to 15 */*/
 			/*background: linear-gradient(90deg, #2C91D0, #1D224A); /* Standard syntax */*/
+		}
+		.wrap{
+			overflow-x: hidden;
+   			overflow-y: hidden;
 		}
 		/*header*/
 
@@ -109,7 +113,8 @@
 			padding-top: 20px;
 			padding: 15px;
 			box-sizing: border-box;
-			height: 800px;
+			height: 820px;
+			font-family: 'Lato', sans-serif;
 		}
 		.main-left li {
 			line-height: 25px;
@@ -137,96 +142,68 @@
 		.left-middle{
 			padding: 20px 0;
 		}
-		/*main右邊*/
+		/*main的右邊*/
 		.main-right{
-			margin-right: 120px;
-			padding-top: 100px;
+			float: left;
+			font-family: 'Lato', sans-serif;
+		}
+		.main-right hr{
+			border-color: white;
+			margin: 20px 0;
 		}
 		.main-right h1{
-			margin-left: 350px;
 			font-family: 'Noto Sans TC', sans-serif;
 			font-size: 1.5em;
 		}
-		.box{
-			float: right;
-			width: 280px;
-			height: 280px;
-			margin: 10px;
-			background: #FFFFFF;
-			border-radius: 5px;
-			border: #D4D4D4 1px solid;
-			-webkit-box-shadow: 0 0 20px #D4D4D4;
-       		-moz-box-shadow: 0 0 20px #D4D4D4;
-            box-shadow: 2px 2px 10px #D4D4D4;
-		}
-		.text{
-			padding: 30px 0 10px 30px;
-			line-height: 1.2em;
-		}
-		.box h2{
-			color: #1D224A;
-			font-family: '微軟正黑體';
-		}
-		.box p{
-			/*line-height: 1.1em;*/
-			color: #A3A3A3;
-			font-family: 'Lato', sans-serif;
+		.main-right p{
+			font-family: 'Noto Sans TC', sans-serif;
 			font-size: 0.9em;
+			color: #171717;
+			margin-top: 15px;
 		}
-		.tag{
-			position: relative;
-			top: 20px;
-			padding: 5px;
-			color: white;
-			border-radius: 0 4px 4px 0;
+		.title{
+			margin: 40px;
 		}
-		.tag-hot{
-			background: #CC0500;
+		.form-all{
+			background: white;
+			/*margin-left: -1600px;*/
+			margin-right: -1600px;
+			height: 687px;
 		}
-		.tag-new{
-			background: #E8810C;
+		.form{
+			width: 400px;
+			margin-left: 50px;
+			padding-right: 1600px;
+			padding-top: 20px;
+			/*margin-left: 1600px;*/
 		}
-		.review{
-			margin: 0 25px;
-			border: 1px dashed #D4D4D4;
-			width: 80%;
-			height: 100px;
+		.form label{
+			display: block;
+			padding: 5px 0;
 		}
-		.btn{
-			width: 50px;
-			height: 50px;
-			border-radius: 5px;
-			text-align: center;
-			box-sizing: border-box;
-			padding-top: 8px;
-			cursor: pointer;
+		.form input{
+			width: 100%;
+			height: 2.5em;
+			margin: 10px 0;
+			-webkit-border-radius: 4px;
+			        border-radius: 4px;
+			-webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.17);
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.17);
 		}
-		.btn-copy{
-			position: relative;
-			display: inline-block;
-			background: #71D47C;
-			left: 145px;
-			top: 12px;
+		.form h2{
+			font-weight: bolder;
 		}
-		.btn-heart{
-			position: relative;
-			display: inline-block;
-			background: #E8B20C;
-			left: 150px;
-			top: 12px;
-		}
-		.more{
+		.btn-update{
+			display: inline;
+			padding: 10px;
 			background: #1D224A;
-			width: 60px;
-			height: 30px;
 			color: white;
-			float: right;
-			margin-right: 415px ;
-			margin-top: 10px;
-			text-align: center;
-			font-family: 'Lato', sans-serif;
-			padding-top:10px;
-			border-radius: 4px;
+			position: relative;
+			right: -320px;
+			top: 15px;
+			-webkit-border-radius: 4px;
+			        border-radius: 4px;
 			cursor: pointer;
 		}
 		/*footer*/
@@ -272,6 +249,7 @@
 	</style>
 </head>
 <body>
+	<div class="wrap">
 	<header>
 	<div class="headerLeft">
 		<div class="bigLogo">
@@ -298,13 +276,16 @@
 			</div>
 			<hr>
 			<ul class="left-top">
-				<li><i class="material-icons">remove_red_eye</i>Collection</li>
-				<li><i class="material-icons">favorite_border</i>My Favorite</li>
-				<li><i class="material-icons">account_circle</i>Personal Manager</li>
+				<li><i class="material-icons">settings</i><a href="setting.html">Account Settings</a></li>
 			</ul>
 			<hr>
 			<div class="left-middle">
-				<h2>Create CV<i class="material-icons" style="padding-left: 120px;font-size: 2.2em;">add_circle</i></h2>
+			<ul>
+				<li><i class="material-icons">description</i><a href="cvManager.html">CV Manager</a></li>
+				<li><i class="material-icons">add_circle</i>Create CV</li>
+				<li><i class="material-icons">remove_red_eye</i><a href="collection.html">Collection</a></li>
+			</ul>
+
 			</div>
 			<hr>
 			<div class="left-bottom">
@@ -312,101 +293,33 @@
 			</div>
 		</div>
 		<div class="main-right">
-			<h1>履歷欣賞</h1>
-			<div class="box">
-				<span class="tag tag-new">New</span>
-				<div class="text">
-				<h2>新銳工程師履歷</h2>
-				<p>Created by APO LIAO</p>
-				</div>
-				<div class="review">
-				</div>
-				<div class="btn btn-copy">
-					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">content_copy</i>
-				</div>
-				<div class="btn btn-heart">
-					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
+			<div class="title">
+				<h1>APO LIAO</h1>
+				<p>Account settings</p>
+			</div>
+			<div class="form-all">
+				<div class="form">
+					<label>Name</label>
+					<input type="text" name="name" value="APO LIAO">
+					<label>Username</label>
+					<input type="text" name="username" value="APO LIAO">
+					<hr>
+					<label>Email</label>
+					<input type="email" name="email">
+					<hr>
+					<h2>Change Password</h2>
+					<label>Old Password</label>
+					<input type="password" name="oldpassword">
+					<label>New Password</label>
+					<input type="password" name="newpassword">
+					<label>Confirm New Password</label>
+					<input type="password" name="confirmpassword">
+					<div class="btn-update">Update</div>
 				</div>
 			</div>
-			<div class="box">
-				<span class="tag tag-new">New</span>
-				<div class="text">
-				<h2>新銳工程師履歷</h2>
-				<p>Created by APO LIAO</p>
-				</div>
-				<div class="review">
-				</div>
-				<div class="btn btn-copy">
-					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">content_copy</i>
-				</div>
-				<div class="btn btn-heart">
-					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
-				</div>
-			</div>
-			<div class="box">
-				<span class="tag tag-new">New</span>
-				<div class="text">
-				<h2>新銳工程師履歷</h2>
-				<p>Created by APO LIAO</p>
-				</div>
-				<div class="review">
-				</div>
-				<div class="btn btn-copy">
-					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">content_copy</i>
-				</div>
-				<div class="btn btn-heart">
-					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
-				</div>
-			</div>
-			<div class="box">
-				<span class="tag tag-new">New</span>
-				<div class="text">
-				<h2>新銳工程師履歷</h2>
-				<p>Created by APO LIAO</p>
-				</div>
-				<div class="review">
-				</div>
-				<div class="btn btn-copy">
-					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">content_copy</i>
-				</div>
-				<div class="btn btn-heart">
-					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
-				</div>
-			</div>
-			<div class="box">
-				<span class="tag tag-hot">Hot</span>
-				<div class="text">
-				<h2>新銳工程師履歷</h2>
-				<p>Created by APO LIAO</p>
-				</div>
-				<div class="review">
-				</div>
-				<div class="btn btn-copy">
-					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">content_copy</i>
-				</div>
-				<div class="btn btn-heart">
-					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
-				</div>
-			</div>
-			<div class="box">
-				<span class="tag tag-new">New</span>
-				<div class="text">
-				<h2>新銳工程師履歷</h2>
-				<p>Created by APO LIAO</p>
-				</div>
-				<div class="review">
-				</div>
-				<div class="btn btn-copy">
-					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">content_copy</i>
-				</div>
-				<div class="btn btn-heart">
-					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
-				</div>
-			</div>
-			<!-- <div class="clearfix"></div> -->
-			<div class="more">more</div>
 		</div>
 		<div class="clearfix"></div>
+
 	</main>
 	<footer>
 		<div class="footerLeft">
@@ -433,5 +346,6 @@
 			</ul>
 		</div>
 	</footer>
+	</div>
 </body>
 </html>
