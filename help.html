@@ -43,6 +43,10 @@
 			font-size: 3em;
 			padding: 10px;
 		}
+		.bigLogo a{
+			text-decoration: none;
+			color: white;
+		}
 		.left{
 			float: left;
 			width: 35%;
@@ -107,7 +111,7 @@
 			padding-top: 20px;
 			padding: 15px;
 			box-sizing: border-box;
-			height: 820px;
+			height: 1349px;
 			font-family: 'Lato', sans-serif;
 		}
 		.main-left li {
@@ -209,7 +213,7 @@
 		#blue{
 			background: #6BB7CF;
 		}
-		.material-icons{
+		.changeBox .material-icons{
 			position: relative;
 			font-size: 2em;
 			left: 4px;
@@ -219,11 +223,14 @@
 			font-family: 'Lato', sans-serif;
 			margin-left: 104.7px;
 		}
+		.video h2{
+			margin-right: 5px;
+		}
 		.videoPart{
 			width: 600px;
 			height: 260px;
 			margin-top: 30px;
-			border-top: 1px solid #a0a6d6;
+			border-top: 1px solid #d0cfcf;
 			box-sizing: border-box;
 			padding: 30px 0;
 		}
@@ -235,6 +242,27 @@
 		}
 		.video-text{
 			float: right;
+			display: inline;
+			width: 240px;
+			font-size: 1.5em;
+		}
+		.video-text a{
+			color: black;
+			text-decoration: none;
+		}
+		.more{
+			background: #1D224A;
+			width: 60px;
+			height: 30px;
+			color: white;
+			position: relative;
+			left: 300px;
+			text-align: center;
+			font-family: 'Lato', sans-serif;
+			padding-top:10px;
+			margin-bottom: 10px;
+			border-radius: 4px;
+			cursor: pointer;
 		}
 		/*footer*/
 		footer{
@@ -245,7 +273,7 @@
 			position: relative;
 		}
 		.footerLeft{
-			float: right;
+			float: left;
 		}
 		.footerLeft p{
 			display: inline;
@@ -282,7 +310,7 @@
 	<header>
 		<div class="headerLeft">
 			<div class="bigLogo">
-				<h1>EasyCV</h1>
+				<a href="index.html"><h1>EasyCV</h1></a>
 			</div>
 		</div>
 		<div class="headerRight">
@@ -318,7 +346,7 @@
 			</div>
 			<hr>
 			<div class="left-bottom">
-				<h2><i class="material-icons">help</i>Help Document</h2>
+				<h2><i class="material-icons">help</i><a href="help.html">Help Document</a></h2>
 			</div>
 		</div>
 		<div class="main-right">
@@ -385,6 +413,7 @@
 							<a href="#">how to quickly create a good CV?</a>
 						</div>
 				</div>
+				<div class="more">more</div>
 			</div>
 		</div>
 		<div class="clearfix"></div>

@@ -17,10 +17,6 @@
 	<style type="text/css">
 		body{
 			background: #ededed;
-			/*background: -webkit-linear-gradient(90deg, #2C91D0, #1D224A); /* For Safari 5.1 to 6.0 */*/
-			/*background: -o-linear-gradient(90deg, #2C91D0, #1D224A); /* For Opera 11.1 to 12.0 */*/
-			/*background: -moz-linear-gradient(90deg, #2C91D0, #1D224A); /* For Firefox 3.6 to 15 */*/
-			/*background: linear-gradient(90deg, #2C91D0, #1D224A); /* Standard syntax */*/
 		}
 		/*header*/
 
@@ -44,6 +40,10 @@
 			color: #1D224A;
 			font-size: 3em;
 			padding: 10px;
+		}
+		.bigLogo a{
+			text-decoration: none;
+			color: white;
 		}
 		.left{
 			float: left;
@@ -110,6 +110,7 @@
 			padding: 15px;
 			box-sizing: border-box;
 			height: 800px;
+			font-family: 'Lato', sans-serif;
 		}
 		.main-left li {
 			line-height: 25px;
@@ -275,7 +276,7 @@
 	<header>
 	<div class="headerLeft">
 		<div class="bigLogo">
-			<h1>EasyCV</h1>
+			<h1><a href="index.html">EasyCV</a></h1>
 		</div>
 	</div>
 	<div class="headerRight">
@@ -298,9 +299,9 @@
 			</div>
 			<hr>
 			<ul class="left-top">
-				<li><i class="material-icons">remove_red_eye</i>Collection</li>
+				<li><i class="material-icons">remove_red_eye</i><a href="collection.html">Collection</a></li>
 				<li><i class="material-icons">favorite_border</i>My Favorite</li>
-				<li><i class="material-icons">account_circle</i>Personal Manager</li>
+				<li><i class="material-icons">account_circle</i><a href="cvManager.html">CV Manager</a></li>
 			</ul>
 			<hr>
 			<div class="left-middle">
@@ -308,7 +309,7 @@
 			</div>
 			<hr>
 			<div class="left-bottom">
-				<h2><i class="material-icons">help</i>Help Document</h2>
+				<h2><i class="material-icons">help</i><a href="help.html">Help Document</a></h2>
 			</div>
 		</div>
 		<div class="main-right">
@@ -403,7 +404,6 @@
 					<i class="material-icons" style="font-size: 1.8em;padding-left: 10px;">favorite_border</i>
 				</div>
 			</div>
-			<!-- <div class="clearfix"></div> -->
 			<div class="more">more</div>
 		</div>
 		<div class="clearfix"></div>

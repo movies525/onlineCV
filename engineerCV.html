@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>engineer CV</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+	</script>
+	<style type="text/css">
+		.wrap{
+			width: 100%;
+			width: 1000px;
+			height: 1414px;
+			margin: 0 auto;
+			position: relative;
+			outline: 2px solid red;
+			font-family: 'Noto Sans TC', sans-serif;
+			background: #E9E9E9;
+		}
+		.block-div{
+			width: 1000px;
+		}
+		.div01{
+			position: relative;
+			height: 350px;
+			outline: green 2px solid;
+		}
+		.photo{
+			width: 400px;
+			height: 350px;
+			background: #b9b7ba;
+			float: left;
+		}
+		.protfolio{
+			float: left;
+			width: 560px;
+			margin: 30px 20px;
+		}
+		.protfolio h2{
+			font-size: 1.2em;
+			display: inline;
+		}
+		.protfolio hr{
+			display: inline-block;
+			margin-left: 95px;
+			width: 370px;
+		}
+		.icon{
+			background: #2d94a4;
+			padding: 5px;
+		}
+		.detail{
+			margin-left: 170px;
+			float: left;
+		}
+		.address{
+			display: inline;
+		}
+		.cellphone,.telephone{
+			float: left;
+		}
+		.telephone{
+			margin-left: 10px;
+		}
+		.detail li{
+			margin-bottom: 5px;
+		}
+		.detail p{
+			display: inline-block;
+		}
+		.detail .material-icons{
+			color: #E9E9E9;
+		}
+		.name{
+			position: absolute;
+			background: rgba(45, 148, 164,0.8);
+			width: 550px;
+			height: 100px;
+			top: 250px;
+		}
+		.name h2{
+			position: relative;
+			top: 15px;
+			left: 130px;
+			width: 420px;
+			font-size: 2.2em;
+			letter-spacing: 3px;
+			color: #E9E9E9;
+		}
+		.name h3{
+			position: relative;
+			top: 20px;
+			left: 135px;
+			width: 415px;
+			color: #E9E9E9;
+			letter-spacing: 2px;
+		}
+		.clearfix{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="block-div div01">
+			<div class="photo">
+				<label id="logo"><img src="img/400px350px.png" id="img">
+						<input type="file" style="display: none;"  id="input" accept="image/*"
+						 value="" onchange="readURL(this);" onclick="myFunction(input)">
+				</label>
+			</div>
+			<div class="protfolio">
+				<h2 contenteditable="true">PROFILE</h2>
+				<hr>
+				<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="detail">
+				<ul>
+					<li>
+						<div class="address">
+							<i class="material-icons icon">location_on</i>
+							<p contenteditable="true">台中市西區公益路二段51號</p>
+						</div>
+					</li>
+					<li>
+						<div class="email">
+							<i class="material-icons icon">email</i>
+							<p contenteditable="true">movies525@gmail.com</p>
+						</div>
+					</li>
+					<li>
+						<div class="website">
+							<i class="material-icons icon">language</i>
+							<a href="http://apoportfolio.web.fc2.com/index.html" contenteditable="true">http://apoportfolio.web.fc2.com/index.html</a>
+						</div>
+					</li>
+					<li>
+						<div class="cellphone">
+							<i class="material-icons icon">phone_iphone</i>
+							<p contenteditable="true">0921222222</p>
+						</div>
+					</li>
+					<li>
+						<div class="telephone">
+							<i class="material-icons icon">phone</i>
+							<p contenteditable="true">042222222</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="name">
+				<h2 contenteditable="true">PING HUA LIAO</h2>
+				<h3 contenteditable="true">Web Design & Developer</h3>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="block-div"></div>
+		<div class="block-div"></div>
+		<div class="block-div"></div>
+	</div>
+	<script>
+		//換照片
+
+		document.getElementById("logo").onclick = function() {myFunction()};
+		function myFunction (input){
+		};
+
+
+		 function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#img')
+                        .attr('src', e.target.result)
+                        .width(100)
+                        .height(100);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        };
+	</script>
+</body>
+</html>
