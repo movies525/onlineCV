@@ -7,18 +7,137 @@
 	<link rel="stylesheet" type="text/css" href="css/cv01Style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.min.js"
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	  crossorigin="anonymous">
 	</script>
+	<style type="text/css">
+		/*header*/
+		header{
+			width: 100%;
+			background: #a9a9a9;
+			height: 4em;
+			border-bottom: 5px solid white;
+		}
+		.headerLeft{
+			float: left;
+			width: 20%;
+		}
+		.headerMiddle{
+			float: left;
+			width: 30%;
+		}
+		.headerMiddle ul{
+			float: left;
+			display: inline-block;
+			height: 69px;
+		}
+		.bg li{
+			display: inline-block;
+			box-sizing: border-box;
+			border: 3px solid white;
+		}
+		#bg04{
+			position: relative;
+			top: -13px;
+			width: 70px;
+			height: 69px;
+			background: rgba(255, 255, 255, 0.3);
+			cursor: pointer;
+		}
+		#bg04 .material-icons{
+			position: relative;
+			font-size: 3em;
+			top: 10px;
+			left: 7px;
+			color: white;
+		}
+		.bg img{
+			width: 64px;
+			height: 60px;
+			cursor: pointer;
+		}
+		.headerRight{
+			float: right;
+			width: 20%;
+		}
+		.bigLogo{
+			float: left;
+			font-family: 'Julius Sans One', sans-serif;
+			color: white;
+			padding: 10px;
+		}
+		.bigLogo a{
+			text-decoration: none;
+			color: white;
+		}
+		.headerRight li{
+			float: left;
+			margin: 10px 0;
+			/*width: 3em;*/
+		}
+		.headerRight a{
+			position: relative;
+			display: table-cell;
+			vertical-align: bottom;
+			border-left: 1px solid white;
+		    border-right: none;
+		    text-decoration: none;
+		    color: #eeeeee;
+		    line-height: 30px;
+		    height: 40px;
+		    padding:0 20px 0 2px ;
+		    font-family: 'Lato', sans-serif;
+		    width: 100%;
+		}
+		.headerRight a:hover{
+			background: white;
+			color: #1D224A;
+			font-weight: bold;
+		}
+	</style>
 </head>
 <body>
+	<header class='no-print'>
+	<div class="headerLeft">
+		<div class="bigLogo">
+			<a href="index.html"><h1>EasyCV</h1></a>
+		</div>
+	</div>
+	<div class="headerMiddle">
+		<ul class="bg">
+			<li id="bg01" class='no-print'><img src="img/flowerBg.jpg"></li>
+			<li id="bg02" class='no-print'><img src="img/bg_txtr02.png"></li>
+			<li id="bg03" class='no-print'><img src="img/oceanBg.jpg"></li>
+			<label id="bgControl">
+				<li id="bg04"><i class="material-icons" id="bgg">add</i></li>
+				<input type="file" style="display: none;"  id="bgInput" accept="image/*"
+						 value="" onchange="readURL(bgInput);" onclick="bgFunction(bgInput)">
+			</label>
+		</ul>
+	</div>
+	<div class="headerRight">
+		<ul>
+			<li onclick="PrintElem('body')" id="printbtn">
+				<a href="#">Print</a>
+			</li>
+			<li>
+				<a href="#">Save</a>
+			</li>
+			<li>
+				<a href="cvManager.html">APO</a>
+			</li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+</header>
 	<div class="wrap">
 		<div class="wrapInside">
 			<div class="left">
-			<button onclick="PrintElem('body')" id="printbtn">print</button>
+			<!-- <button onclick="PrintElem('body')" id="printbtn">print</button> -->
 				<div class="photo">
 					<label id="logo"><img src="img/100px.png" id="img">
 						<input type="file" style="display: none;"  id="input" accept="image/*"
@@ -259,7 +378,39 @@
 		</div>
 	</div>
 	<script>
-		
+		//更改背景
+		$(document).on("click","#bg01",function(e){
+			$(".wrap").attr("style",'background-image: url("./img/flowerBg.jpg")');
+		});
+		$(document).on("click","#bg02",function(e){
+			$(".wrap").attr("style",'background-image: url("./img/bg_txtr02.png")');
+			console.log("bg02 Click")
+		});
+		$(document).on("click","#bg03",function(e){
+			$(".wrap").attr("style",'background-image: url("./img/oceanBg.jpg")');
+		});
+		//自訂背景
+		// document.getElementById("bg04").onclick = function() {bgFunction()};
+		// function bgFunction (bgInput){
+		// };
+
+
+		//  function readURL(bgInput) {
+  //           if (bgInput.files && bgInput.files[0]) {
+  //               var reader = new FileReader();
+
+  //               reader.onload = function (e) {
+  //               	$(".wrap").attr("style",'background-image: url("./img/oceanBg.jpg")');
+  //               	console.log("跑進來囉");
+  //                   $('.wrap')
+  //                       .attr('src', e.target.result)
+  //                       .width(64)
+  //                       .height(61);
+  //               };
+
+  //               reader.readAsDataURL(bgInput.files[0]);
+  //           }
+  //       };
 
 		// 評分
 		$(document).on("click",".star",function(e){
@@ -288,7 +439,7 @@
 
 		//換照片
 
-		document.getElementById("logo").onclick = function() {myFunction()};
+		document.getElementById("bgControl").onclick = function() {myFunction()};
 		function myFunction (input){
 		};
 
@@ -310,7 +461,6 @@
 
         //列印
         function PrintElem(elem){
-        	$('#printbtn').remove();
         Popup($('<div/>').append($(elem).clone()).html());
 
     	};
@@ -320,6 +470,9 @@
 	      mywindow.document.write('<html><head><title></title>');
 	      mywindow.document.write('<link rel="stylesheet" href="css/cv01Style.css" type="text/css" media="print"/>');
 	      mywindow.document.write('<link rel="stylesheet" href="css/reset.css" type="text/css" media="print" />');
+	      mywindow.document.write('<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="print" />');
+	      mywindow.document.write('<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato" rel="stylesheet" media="print" />');
+	      mywindow.document.write('<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" media="print" />');
 	      mywindow.document.write('</head><body >');
 	      mywindow.document.write(data);
 	      mywindow.document.write('</body></html>');

@@ -48,7 +48,7 @@
 		}
 		.protfolio hr{
 			display: inline-block;
-			margin-left: 95px;
+			float: right;
 			width: 370px;
 		}
 		.icon{
@@ -185,8 +185,8 @@
                 reader.onload = function (e) {
                     $('#img')
                         .attr('src', e.target.result)
-                        .width(100)
-                        .height(100);
+                        .width(400)
+                        .height(350);
                 };
 
                 reader.readAsDataURL(input.files[0]);

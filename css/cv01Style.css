@@ -73,7 +73,7 @@
 			left: -70px;
 		}
 
-		div .aboutMe:before{
+		div .aboutMe:before,div .education:before,div .experience:before,div .skills:before{
 			content: "";
 			position: absolute;
 			width: 20px;
@@ -83,7 +83,7 @@
 			left: -77.5px;
 			text-align: center;
 		}
-		div .education:before{
+		/*div .education:before{
 			content: "";
 			position: absolute;
 			width: 20px;
@@ -102,7 +102,7 @@
 			background: #E80C7A;
 			left: -77.5px;
 			text-align: center;
-		}
+		}*/
 		.experience{
 			position: relative;
 		}
@@ -137,7 +137,7 @@
 			display: block;
 		}
 		/*SKILL*/
-		div .skills:before{
+		/*div .skills:before{
 			content: "";
 			position: absolute;
 			width: 20px;
@@ -146,7 +146,7 @@
 			background: #E80C7A;
 			left: -77.5px;
 			text-align: center;
-		}
+		}*/
 		.skills{
 			position: relative;
 		}
@@ -253,6 +253,10 @@
 		}
 @media print {
 .wrap {
-    /*/background-image: url("../img/flowerBg.jpg") !important;*/
     -webkit-print-color-adjust: exact; 
-}}
+}
+ .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
