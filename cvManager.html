@@ -314,9 +314,9 @@
 		</div>
 		<div class="main-right">
 			<h1>履歷管理</h1>
-			<div class="btn-new">建立新履歷</div>
+			<div class="btn-new" id="createNew">建立新履歷</div>
 			<div class="clearfix"></div>
-			<div class="cv">
+			<div class="cv" id="cv1">
 				<div class="cv-left">
 					<div class="btn btn-edit"><i class="material-icons" style="position: relative;left: 5px;">create</i></div>
 					<div class="btn btn-copy"><i class="material-icons" style="position: relative;left: 5px;">content_copy</i></div>
@@ -330,7 +330,7 @@
 					<p>created at 2017/07/28</p>
 				</div>
 			</div>
-			<div class="cv">
+			<div class="cv" id="cv2">
 				<div class="cv-left">
 					<div class="btn btn-edit"><i class="material-icons" style="position: relative;left: 5px;">create</i></div>
 					<div class="btn btn-copy"><i class="material-icons" style="position: relative;left: 5px;">content_copy</i></div>
@@ -344,7 +344,7 @@
 					<p>created at 2017/07/28</p>
 				</div>
 			</div>
-			<div class="cv">
+			<div class="cv" id="cv3">
 				<div class="cv-left">
 					<div class="btn btn-edit"><i class="material-icons" style="position: relative;left: 5px;">create</i></div>
 					<div class="btn btn-copy"><i class="material-icons" style="position: relative;left: 5px;">content_copy</i></div>
@@ -387,5 +387,14 @@
 			</ul>
 		</div>
 	</footer>
+	<script>
+	//建立新履歷
+		$(document).on("click","#createNew",function(e){
+			var $div = $('div[id^="cv"]:last');
+			var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
+			var $cv = $div.prop('id','cv'+num);
+			window.location.href = $cv[0].id+".html";
+		});
+	</script>
 </body>
 </html>

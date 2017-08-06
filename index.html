@@ -14,6 +14,7 @@
 	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	  crossorigin="anonymous">
 	</script>
+	<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
 	<style type="text/css">
 		body{
 			background: #1D224A;
@@ -350,6 +351,24 @@
 	</style>
 </head>
 <body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1798582886824612',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 <header>
 	<div class="headerLeft">
 		<div class="bigLogo">
@@ -370,19 +389,40 @@
 </header>
 	<div class="share">
 		<ul>
-			<li>
+			<li id="fb">
 				<a href="#" class="fb">
 					<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
 				</a>
 			</li>
-			<li>
-				<a href="#" class="messenger">
+			<!-- <li id="messenger">
+				<a href="#" class="messenger"> -->
 					<!-- Facebook Messenger icon by Icons8 -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0px" y="0px" viewBox="0 0 50 50" class="icon icons8-Facebook-Messenger" ><g id="surface1"><path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 25 2 C 12.347656 2 2 11.597656 2 23.5 C 2 30.007813 5.132813 35.785156 10 39.71875 L 10 48.65625 L 11.46875 47.875 L 18.6875 44.125 C 20.703125 44.664063 22.800781 45 25 45 C 37.652344 45 48 35.402344 48 23.5 C 48 11.597656 37.652344 2 25 2 Z M 25 4 C 36.644531 4 46 12.757813 46 23.5 C 46 34.242188 36.644531 43 25 43 C 22.835938 43 20.742188 42.6875 18.78125 42.125 L 18.40625 42.03125 L 18.0625 42.21875 L 12 45.375 L 12 38.8125 L 11.625 38.53125 C 6.960938 34.941406 4 29.539063 4 23.5 C 4 12.757813 13.355469 4 25 4 Z M 22.71875 17.71875 L 10.6875 30.46875 L 21.5 24.40625 L 27.28125 30.59375 L 39.15625 17.71875 L 28.625 23.625 Z "></path></g></svg>
+<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0px" y="0px" viewBox="0 0 50 50" class="icon icons8-Facebook-Messenger" ><g id="surface1"><path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 25 2 C 12.347656 2 2 11.597656 2 23.5 C 2 30.007813 5.132813 35.785156 10 39.71875 L 10 48.65625 L 11.46875 47.875 L 18.6875 44.125 C 20.703125 44.664063 22.800781 45 25 45 C 37.652344 45 48 35.402344 48 23.5 C 48 11.597656 37.652344 2 25 2 Z M 25 4 C 36.644531 4 46 12.757813 46 23.5 C 46 34.242188 36.644531 43 25 43 C 22.835938 43 20.742188 42.6875 18.78125 42.125 L 18.40625 42.03125 L 18.0625 42.21875 L 12 45.375 L 12 38.8125 L 11.625 38.53125 C 6.960938 34.941406 4 29.539063 4 23.5 C 4 12.757813 13.355469 4 25 4 Z M 22.71875 17.71875 L 10.6875 30.46875 L 21.5 24.40625 L 27.28125 30.59375 L 39.15625 17.71875 L 28.625 23.625 Z "></path></g></svg>
 				</a>
-			</li>
-			<li>
-				<a href="#" class="line">
+			</li> -->
+			<li id="line">
+			<!-- Line 分享按鈕 -->
+				<script>
+				//<![CDATA[
+				(function() {
+				var img = "http://res.cloudinary.com/ds12pexh6/image/upload/v1502011348/line_tel9hk.png", // line 按鈕圖示
+				title = document.title,
+				url = "http://" + location.hostname + location.pathname,
+				href, html;
+
+				// 行動裝置語法
+				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				href = "http://line.naver.jp/R/msg/text/?" + title + "%0D%0A" + url;
+				} else {
+				// 網頁版語法
+				href = "https://lineit.line.me/share/ui?url=" + encodeURIComponent(url);
+				}
+				html = "<a href='" + href + "' target='_blank'><img src='" + img + "'/></a>";
+				document.write(html);
+				})();
+				//]]>
+				</script>
+				<a class="line">
 					<!-- LINE icon by Icons8 -->
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" class="icon icons8-LINE" ><path style="fill:#FFFFFF;" d="M37.113,22.417c0-5.865-5.88-10.637-13.107-10.637s-13.108,4.772-13.108,10.637	c0,5.258,4.663,9.662,10.962,10.495c0.427,0.092,1.008,0.282,1.155,0.646c0.132,0.331,0.086,0.85,0.042,1.185	c0,0-0.153,0.925-0.187,1.122c-0.057,0.331-0.263,1.296,1.135,0.707c1.399-0.589,7.548-4.445,10.298-7.611h-0.001	C36.203,26.879,37.113,24.764,37.113,22.417z M18.875,25.907h-2.604c-0.379,0-0.687-0.308-0.687-0.688V20.01	c0-0.379,0.308-0.687,0.687-0.687c0.379,0,0.687,0.308,0.687,0.687v4.521h1.917c0.379,0,0.687,0.308,0.687,0.687	C19.562,25.598,19.254,25.907,18.875,25.907z M21.568,25.219c0,0.379-0.308,0.688-0.687,0.688s-0.687-0.308-0.687-0.688V20.01	c0-0.379,0.308-0.687,0.687-0.687s0.687,0.308,0.687,0.687V25.219z M27.838,25.219c0,0.297-0.188,0.559-0.47,0.652	c-0.071,0.024-0.145,0.036-0.218,0.036c-0.215,0-0.42-0.103-0.549-0.275l-2.669-3.635v3.222c0,0.379-0.308,0.688-0.688,0.688	c-0.379,0-0.688-0.308-0.688-0.688V20.01c0-0.296,0.189-0.558,0.47-0.652c0.071-0.024,0.144-0.035,0.218-0.035	c0.214,0,0.42,0.103,0.549,0.275l2.67,3.635V20.01c0-0.379,0.309-0.687,0.688-0.687c0.379,0,0.687,0.308,0.687,0.687V25.219z	 M32.052,21.927c0.379,0,0.688,0.308,0.688,0.688c0,0.379-0.308,0.687-0.688,0.687h-1.917v1.23h1.917	c0.379,0,0.688,0.308,0.688,0.687c0,0.379-0.309,0.688-0.688,0.688h-2.604c-0.378,0-0.687-0.308-0.687-0.688v-2.603	c0-0.001,0-0.001,0-0.001c0,0,0-0.001,0-0.001v-2.601c0-0.001,0-0.001,0-0.002c0-0.379,0.308-0.687,0.687-0.687h2.604	c0.379,0,0.688,0.308,0.688,0.687s-0.308,0.687-0.688,0.687h-1.917v1.23H32.052z"></path></svg>
 				</a>
@@ -467,6 +507,23 @@
 		</div>
 	</footer>
 	<script>
+	document.getElementById('fb').onclick = function() {
+	  FB.ui(
+  {
+    method: 'share',
+    href: 'http://apoportfolio.web.fc2.com/index.html',
+  },
+  // callback
+  function(response) {
+    // if (response && !response.error_message) {
+    //   alert('Posting completed.');
+    // } else {
+    //   alert('Error while posting.');
+    // }
+  }
+);
+	  console.log("click");
+	}
 	</script>
 </body>
 </html>

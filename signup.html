@@ -17,6 +17,10 @@
 			font-size: 3em;
 			padding: 30px 0 0 0;
 		}
+		.bigLogo a{
+			text-decoration: none;
+			color: white;
+		}
 		.formAll{
 			margin: 0 auto;
 			width: 1000px;
@@ -62,10 +66,8 @@
 			height: 1em;
 			margin: 10px auto;
 		}
-		#password{
+		.password{
 			display: inline;
-			position: relative;
-			left: 24.797px;
 		}
 		.forget{
 			display: inline;
@@ -74,7 +76,10 @@
 			font-family: 'Lato', sans-serif;
 		}
 		input:focus{
-			background: #E9644A;
+			-webkit-box-shadow: 0 0 10px rgba(154, 154, 154, 0.46);
+       		-moz-box-shadow: 0 0 10px rgba(154, 154, 154, 0.46);
+            box-shadow: 0 0 10px rgba(154, 154, 154, 0.46);
+		    outline:none;
 		}
 		.formAll input{
 			display: block;
@@ -167,7 +172,7 @@
 <body>
 	<div class="formAll">
 		<div class="bigLogo">
-			<h1>EasyCV</h1>
+			<a href="index.html"><h1>EasyCV</h1></a>
 		</div>
 		<form>
 			<fieldset>
@@ -183,20 +188,34 @@
 					<h5 id="or">Or</h5>
 				</div>
 				<label>Your name</label>
-				<input type="text" name="name">
+				<input type="text" name="name" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="至少要一個大寫和小寫英文字母和數字，帳號長度要超過八位">
 				<label>Email</label>
-				<input type="email" name="email">
-				<label id="password">Password</label>
-				<input type="password" name="password">
-				<label id="password">Re-enter password</label>
-				<input type="password" name="password">
+				<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+				<label class="password">Password</label>
+				<input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="至少要一個大寫和小寫英文字母和數字，帳號長度要超過八位">
+				<label class="password">Re-enter password</label>
+				<input type="password" name="password" id="re_password">
 				<input type="submit" id="submit" value="Create your EasyCV account">
 				<div class="toSignIn">
 					<p>Already have an account?</p>
-					<a>Sign in</a>
+					<a href="login.html">Sign in</a>
 				</div>
 			</fieldset>
 		</form>
 	</div>
+	<script>
+		var password = document.getElementById('password'),
+			re_password = document.getElementById('re_password');
+		function validatePassword(){
+			if(password.value != re_password.value){
+				re_password.setCustomValidity('密碼不符');
+			}else{
+				re_password.setCustomValidity('');
+			}
+		};
+		password.onchange = validatePassword();
+		re_password.onkeyup = validatePassword;
+
+	</script>
 </body>
 </html>

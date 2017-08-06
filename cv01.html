@@ -28,7 +28,7 @@
 		}
 		.headerMiddle{
 			float: left;
-			width: 30%;
+			width: 50%;
 		}
 		.headerMiddle ul{
 			float: left;
@@ -40,7 +40,7 @@
 			box-sizing: border-box;
 			border: 3px solid white;
 		}
-		#bg04{
+		#bgMax{
 			position: relative;
 			top: -13px;
 			width: 70px;
@@ -48,14 +48,14 @@
 			background: rgba(255, 255, 255, 0.3);
 			cursor: pointer;
 		}
-		#bg04 .material-icons{
+		#bgMax .material-icons{
 			position: relative;
 			font-size: 3em;
 			top: 10px;
 			left: 7px;
 			color: white;
 		}
-		.bg img{
+		#bg1 img,#bg2 img,#bg03 img{
 			width: 64px;
 			height: 60px;
 			cursor: pointer;
@@ -109,11 +109,12 @@
 	</div>
 	<div class="headerMiddle">
 		<ul class="bg">
-			<li id="bg01" class='no-print'><img src="img/flowerBg.jpg"></li>
-			<li id="bg02" class='no-print'><img src="img/bg_txtr02.png"></li>
-			<li id="bg03" class='no-print'><img src="img/oceanBg.jpg"></li>
+			<li id="bg1" class='no-print'><img src="img/flowerBg.jpg"></li>
+			<li id="bg2" class='no-print'><img src="img/bg_txtr02.png"></li>
+			<li id="bg03" class='no-print'><img src="img/oceanBg.jpg" style="width: 64px;
+			height: 60px; "></li>
 			<label id="bgControl">
-				<li id="bg04"><i class="material-icons" id="bgg">add</i></li>
+				<li id="bgMax"><img id="bgAdd1"><i class="material-icons">add</i></li>
 				<input type="file" style="display: none;"  id="bgInput" accept="image/*"
 						 value="" onchange="readURL(bgInput);" onclick="bgFunction(bgInput)">
 			</label>
@@ -379,38 +380,45 @@
 	</div>
 	<script>
 		//更改背景
-		$(document).on("click","#bg01",function(e){
+		$(document).on("click","#bg1",function(e){
 			$(".wrap").attr("style",'background-image: url("./img/flowerBg.jpg")');
 		});
-		$(document).on("click","#bg02",function(e){
+		$(document).on("click","#bg2",function(e){
 			$(".wrap").attr("style",'background-image: url("./img/bg_txtr02.png")');
 			console.log("bg02 Click")
 		});
 		$(document).on("click","#bg03",function(e){
 			$(".wrap").attr("style",'background-image: url("./img/oceanBg.jpg")');
 		});
+
 		//自訂背景
-		// document.getElementById("bg04").onclick = function() {bgFunction()};
-		// function bgFunction (bgInput){
-		// };
+		document.getElementById("bgMax").onclick = function() {bgFunction()};
+		function bgFunction (bgInput){
+		};
 
 
-		//  function readURL(bgInput) {
-  //           if (bgInput.files && bgInput.files[0]) {
-  //               var reader = new FileReader();
+		 function readURL(bgInput) {
+            if (bgInput.files && bgInput.files[0]) {
+                var reader = new FileReader();
 
-  //               reader.onload = function (e) {
-  //               	$(".wrap").attr("style",'background-image: url("./img/oceanBg.jpg")');
-  //               	console.log("跑進來囉");
-  //                   $('.wrap')
-  //                       .attr('src', e.target.result)
-  //                       .width(64)
-  //                       .height(61);
-  //               };
+                reader.onload = function (e) {
+                	var $li = $('li[id^="bg0"]:last');
+					var num = parseInt( $li.prop("id").match(/\d+/g), 10 ) +1;
+					var $bg = $li.clone().prop('id', 'bg0'+num ).css("margin-left","4px");
+					$li.after( $bg ).siblings('selector').find('img').attr('src',e.target.result)
+													.width(64).height(60);
+					// $li.siblings('selector').find('img').attr('src',e.target.result)
+					// 								.width(64).height(60);
 
-  //               reader.readAsDataURL(bgInput.files[0]);
-  //           }
-  //       };
+
+					// .find('img').attr('src',e.target.result)
+					// 								.width(64).height(60);
+
+                };
+
+                reader.readAsDataURL(bgInput.files[0]);
+            }
+        };
 
 		// 評分
 		$(document).on("click",".star",function(e){
@@ -439,25 +447,25 @@
 
 		//換照片
 
-		document.getElementById("bgControl").onclick = function() {myFunction()};
-		function myFunction (input){
-		};
+		// document.getElementById("bgControl").onclick = function() {myFunction()};
+		// function myFunction (input){
+		// };
 
 
-		 function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
+		//  function readURL(input) {
+  //           if (input.files && input.files[0]) {
+  //               var reader = new FileReader();
 
-                reader.onload = function (e) {
-                    $('#img')
-                        .attr('src', e.target.result)
-                        .width(100)
-                        .height(100);
-                };
+  //               reader.onload = function (e) {
+  //                   $('#img')
+  //                       .attr('src', e.target.result)
+  //                       .width(100)
+  //                       .height(100);
+  //               };
 
-                reader.readAsDataURL(input.files[0]);
-            }
-        };
+  //               reader.readAsDataURL(input.files[0]);
+  //           }
+  //       };
 
         //列印
         function PrintElem(elem){
@@ -470,9 +478,6 @@
 	      mywindow.document.write('<html><head><title></title>');
 	      mywindow.document.write('<link rel="stylesheet" href="css/cv01Style.css" type="text/css" media="print"/>');
 	      mywindow.document.write('<link rel="stylesheet" href="css/reset.css" type="text/css" media="print" />');
-	      mywindow.document.write('<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="print" />');
-	      mywindow.document.write('<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato" rel="stylesheet" media="print" />');
-	      mywindow.document.write('<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" media="print" />');
 	      mywindow.document.write('</head><body >');
 	      mywindow.document.write(data);
 	      mywindow.document.write('</body></html>');

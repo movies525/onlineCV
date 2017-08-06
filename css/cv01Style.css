@@ -1,3 +1,9 @@
+
+		/*大塊div彼此距離*/
+		.photo,.name,.birthAdd,.phoneEmailWeb,.aboutMe,.education,.experience,.skills,.achievement{
+			margin: 2em 0;
+		}
+
 		h1{
 			font-size: 3em;
 			font-weight: bold;
@@ -7,10 +13,6 @@
 		}
 		h5{
 			font-size: 1.1em;
-		}
-		/*大塊div彼此距離*/
-		.photo,.name,.birthAdd,.phoneEmailWeb,.aboutMe,.education,.experience,.skills,.achievement{
-			margin: 2em 0;
 		}
 		/*左邊*/
 		#logo{
@@ -259,4 +261,16 @@
     {
         display: none !important;
     }
+
+h1{
+	font-size: 3em !important;
+	font-weight: bold !important;
+}
+h2{
+	font-size: 2em !important;
+}
+h5{
+	font-size: 1.1em !important;
+}
+
 }
