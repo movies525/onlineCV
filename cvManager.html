@@ -119,6 +119,10 @@
 			top: 5px;
 			padding-right: 10px;
 		}
+		.main-left a{
+			color: white;
+			text-decoration: none;
+		}
 
 		.pic img{
 			width: 100px;
@@ -176,6 +180,10 @@
 			float: left;
 			padding: 15px;
 		}
+		#createNew a{
+			text-decoration: none;
+			color: white;
+		}
 		.btn{
 			width: 50px;
 			height: 50px;
@@ -215,10 +223,11 @@
 		.preview{
 			position: relative;
 			display: inline-block;
-			width: 150px;
-			height: 100px;
+			width: 100px;
+			height: 140px;
+			padding: 10px;
 			left: 50px;
-			top: 50px;
+			top: 20px;
 			border: 1px dashed #D4D4D4;
 		}
 		.cv-right{
@@ -314,7 +323,7 @@
 		</div>
 		<div class="main-right">
 			<h1>履歷管理</h1>
-			<div class="btn-new" id="createNew">建立新履歷</div>
+			<div class="btn-new" id="createNew"><a href="cv01.html">建立新履歷</a></div>
 			<div class="clearfix"></div>
 			<div class="cv" id="cv1">
 				<div class="cv-left">
@@ -323,8 +332,8 @@
 					<div class="btn btn-delete"><i class="material-icons" style="position: relative;left: 5px;">delete</i></div>
 				</div>
 				<div class="cv-middle">
-					<h2>履歷標題</h2>
-					<div class="preview"></div>
+					<h2>網頁設計師</h2>
+					<div class="preview"><img src="img/apoCV.jpg" width="100px" height="140px"></div>
 				</div>
 				<div class="cv-right">
 					<p>created at 2017/07/28</p>
@@ -332,16 +341,16 @@
 			</div>
 			<div class="cv" id="cv2">
 				<div class="cv-left">
-					<div class="btn btn-edit"><i class="material-icons" style="position: relative;left: 5px;">create</i></div>
-					<div class="btn btn-copy"><i class="material-icons" style="position: relative;left: 5px;">content_copy</i></div>
-					<div class="btn btn-delete"><i class="material-icons" style="position: relative;left: 5px;">delete</i></div>
+					<a href="kikicv.html" style="text-decoration: none;color: black;"><div class="btn btn-edit"><i class="material-icons" style="position: relative;left: 5px;">create</i></div></a>
+					<div class="btn btn-copy" id="copy"><i class="material-icons" style="position: relative;left: 5px;">content_copy</i></div>
+					<div class="btn btn-delete" id="delete"><i class="material-icons" style="position: relative;left: 5px;">delete</i></div>
 				</div>
 				<div class="cv-middle">
-					<h2>履歷標題</h2>
-					<div class="preview"></div>
+					<h2>前端工程師</h2>
+					<div class="preview"><img src="img/kikiCV.jpg" width="100px" height="140px"></div>
 				</div>
 				<div class="cv-right">
-					<p>created at 2017/07/28</p>
+					<p>created at 2017/06/05</p>
 				</div>
 			</div>
 			<div class="cv" id="cv3">
@@ -351,11 +360,11 @@
 					<div class="btn btn-delete"><i class="material-icons" style="position: relative;left: 5px;">delete</i></div>
 				</div>
 				<div class="cv-middle">
-					<h2>履歷標題</h2>
-					<div class="preview"></div>
+					<h2>工業設計師</h2>
+					<div class="preview"><img src="img/autocadCV.jpg" width="100px" height="140px"></div>
 				</div>
 				<div class="cv-right">
-					<p>created at 2017/07/28</p>
+					<p>created at 2017/05/28</p>
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -395,6 +404,15 @@
 			var $cv = $div.prop('id','cv'+num);
 			window.location.href = $cv[0].id+".html";
 		});
+	//刪除區塊
+	$(document).on("click","#delete",function(e){
+		$('#cv2').remove();
+	});
+	//複製區塊
+	$(document).on("click","#copy",function(e){
+		var block = $('#cv2').clone();
+		$('#cv2').after(block);
+	});
 	</script>
 </body>
 </html>

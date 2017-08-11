@@ -4,10 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/cv01Style.css">
+	<link rel="stylesheet" type="text/css" href="css/kikiCVStyle.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
 	<script
 	  src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -101,7 +100,7 @@
 	</style>
 </head>
 <body>
-	<header class='no-print'>
+<header class='no-print'>
 	<div class="headerLeft">
 		<div class="bigLogo">
 			<a href="index.html"><h1>EasyCV</h1></a>
@@ -138,34 +137,45 @@
 	<div class="wrap">
 		<div class="wrapInside">
 			<div class="left">
-			<!-- <button onclick="PrintElem('body')" id="printbtn">print</button> -->
 				<div class="photo">
-					<label id="logo"><img src="img/apo300.png" id="img" width="100px" height="100px;">
+					<label id="logo"><img src="img/usa.jpg" id="img" height="160" width="160">
 						<input type="file" style="display: none;"  id="input" accept="image/*"
 						 value="" onchange="readURL(this);" onclick="myFunction(input)">
 					</label>
 				</div>
 				<div class="name" contenteditable="true">
-					<h1>APO LIAO</h1>
+					<h1>曾 安綺</h1>
 				</div>
 				<div class="birthAdd">
 					<ul>
 						<li>
-							<div class="leftTitle" contenteditable="true">D.O.B:</div>
+							<div class="leftTitle" contenteditable="true">出生 : </div>
 							<div class="leftContent" contenteditable="true">
-								<p>1993.01.24</p>
+								<p>1984/10/29</p>
 							</div>
 						</li>
 						<li>
-							<div class="leftTitle fontChinese" contenteditable="true">性別:</div>
+							<div class="leftTitle " contenteditable="true">性別 : </div>
 							<div class="leftContent" contenteditable="true">
 								<p class="fontChinese">女</p>
 							</div>
 						</li>
 						<li>
-							<div class="leftTitle" contenteditable="true">Address:</div>
+							<div class="leftTitle" contenteditable="true">出生地 : </div>
 							<div class="leftContent" contenteditable="true">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+								<p class="fontChinese">桃園縣</p>
+							</div>
+						</li>
+						<li>
+							<div class="leftTitle" contenteditable="true">現居地 : </div>
+							<div class="leftContent" contenteditable="true">
+								<p class="fontChinese">台中市西區忠明南路333號</p>
+							</div>
+						</li>
+						<li>
+							<div class="leftTitle" contenteditable="true">戶籍地 : </div>
+							<div class="leftContent" contenteditable="true">
+								<p class="fontChinese">新北市板橋區民生路三段323號七樓之四</p>
 							</div>
 						</li>
 					</ul>
@@ -174,101 +184,89 @@
 				<div class="phoneEmailWeb">
 					<ul>
 						<li>
-							<div class="phone" contenteditable="true">Phone:</div>
-							<div class="phone" contenteditable="true">
-								<p>0921222222</p>
+							<div class="leftTitle" contenteditable="true">Phone : </div>
+							<div class="phone leftContent" contenteditable="true">
+								<p>0981-119757</p>
 							</div>
 						</li>
 						<li>
-							<div class="phone" contenteditable="true">Email:</div>
-							<div class="phone" contenteditable="true">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+							<div class="leftTitle" contenteditable="true">Email : </div>
+							<div class="phone leftContent" contenteditable="true">
+								<p>tseng.kiki73@gmail.com</p>
 							</div>
 						</li>
-						<li>
-							<div class="phone" contenteditable="true">Website:</div>
-							<div class="phone" contenteditable="true">
-								<a href="http://apoportfolio.web.fc2.com/index.html">http://apoportfolio.web.fc2.com/index.html</a>
-							</div>
-						</li>
+						
 					</ul>
 
 				</div>
 			</div>
 			<div class="right">
 				<div class="aboutMe">
-					<h2 contenteditable="true">ABOUT ME</h2>
-					<p contenteditable="true" class="lineHeight">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<h2 contenteditable="true">自傳 ❖ ABOUT ME</h2>
+					<p contenteditable="true" style="margin-top: 20px;margin-left: 20px;line-height: 22px;">家境清寒，我是家中最小的孩子，自小生性外向靈巧，喜歡戶外活動接近大自然，也會在課餘後閱讀理財雜誌及各種書籍。<br>長大自從大學畢業後，一切開銷皆靠自己掙來，不再向家人伸手，努力一段日子後累積第一桶金便開始投資不動產，也投身在不動產界十年，主辦新北市江子翠重劃區案子，期間接觸多方不同人事物，主要工作為協調政府部門與公司工程單位，提供區內地主專業諮詢以及重劃個階段土地權利文書作業統籌，也因為前公司老闆信任提攜，委派許多工作，常常有機會出國開拓視野。<br>而自身投資不動產有賺有賠，大環境常常是影響結果的主因，並非單靠人力可以控制，加上投機令我不安，與我價值觀念不合，所以在完成手上案子後馬上辭職並交接工作，我想改變自己，也想去完成小時候的夢想，於是我一人起身去美國舊金山遊學，給自己半年時間去壯遊，期間我認識了很多不同文化背景的同學，也拜訪了很多國際聞名的景點，認知了許多在台灣無法接觸的人事物。<br>回國後想運用自己的技師執照，進公司承辦經濟部工業局相關案子，但我本性實事求是，遇到政府中央單位公務人員常因權責不足虛與委蛇，又與現實脫節，讓我主動求去。之後到台灣大學進修APP及程式初級課程，引發我的興趣，故在時代潮流下，順勢而為的我學習前端課程，也符合自己喜愛學習及勇於挑戰的性格，未來希望能有機會將程式結合不動產專業及都市計畫素養，運用在台灣社會，讓世界因為我的努力變得更好。
+					</p>
 				</div>
 				<div class="education" >
-					<h2 contenteditable="true">EDUCATION</h2>
-						<ul>
+					<h2 contenteditable="true">學歷 ❖ EDUCATION</h2>
+						<ul style="margin-left: 20px;">
+							
 							<li>
-								<div class="year" contenteditable="true">98-00</div>
+								<div class="year" contenteditable="true">2000.9-2003.6</div>
 								<div class="school">
-									<p contenteditable="true">Course studies</p>
-									<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tem</p>
+									<p contenteditable="true">臺北市立松山高級中學</p>
+									
 								</div>
 							</li>
 							<li>
-								<div class="year" contenteditable="true">00-03</div>
+								<div class="year" contenteditable="true">2003.9-2007.6</div>
 								<div class="school">
-									<p contenteditable="true">Course studies</p>
-									<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tem</p>
+									<p contenteditable="true">國立成功大學 National Cheng Kung University</p>
+									<p contenteditable="true" style="margin-top: 8px;">都市計畫系-學士</p>
+								</div>
+							</li>
+							<li>
+								<div class="year" contenteditable="true">2015.9-2016.2</div>
+								<div class="school">
+									<p contenteditable="true">ILSC, San Francisco, USA</p>
+									
 								</div>
 							</li>
 						</ul>
 
 				</div>
 				<div class="experience">
-					<h2 contenteditable="true">EXPERIENCE</h2>
-					<div class="toolbarExp">
-					<i class="material-icons addExp">add_circle</i>
-					<i class="material-icons delete">remove_circle</i>
-
-					</div>
-						<ul>
+					<h2 contenteditable="true">經歷 ❖ EXPERIENCE</h2>
+						<ul style="margin-left: 20px;">
 							<li>
-								<div class="year" contenteditable="true">04-05</div>
+								<div class="year" contenteditable="true">2007.9-2008.10</div>
 								<div class="school">
-									<h5 contenteditable="true">Company Name</h5>
-									<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tempore autem consequuntur expedita</p>
+									<h5 contenteditable="true">三地開發實業股份有限公司</h5>
+									<p contenteditable="true" style="margin-top: 8px;">重劃行政助理</p>
 								</div>
 							</li>
 							<li>
-								<div class="year" contenteditable="true">06-10</div>
+								<div class="year" contenteditable="true">2008.10-2015.8</div>
 								<div class="school">
-									<h5 contenteditable="true">Company Name</h5>
-									<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tempore autem consequuntur expedita</p>
+									<h5 contenteditable="true">立信機構有限公司</h5>
+									<p contenteditable="true" style="margin-top: 8px;">重劃行政主辦</p>
 								</div>
 							</li>
-							<div id="experience1">
-								<li>
-									<div class="year" contenteditable="true">10-17</div>
-									<div class="school">
-										<h5 contenteditable="true">Company Name</h5>
-										<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam saepe error, sapiente ratione, tempore autem consequuntur expedita</p>
-									</div>
-								</li>
-							</div>
+							<li>
+								<div class="year" contenteditable="true">2016.5-2016.7</div>
+								<div class="school">
+									<h5 contenteditable="true">合美工程股份有限公司</h5>
+									<p contenteditable="true" style="margin-top: 8px;">都市計畫規劃師</p>
+								</div>
+							</li>
 						</ul>
 
 				</div>
 				<div class="skills">
-				<div class="toolbarSk">
-					<i class="material-icons addSkills">add_circle</i>
-					<i class="material-icons delete">remove_circle</i>
-
-				</div>
-					<h2 contenteditable="true">SKILLS</h2>
-						<ul>
+					<h2 contenteditable="true">技能 ❖ SKILLS</h2>
+						<ul style="margin-top: 20px;margin-left: 20px;">
+							
 							<li>
-								<div class="skillsTitle" contenteditable="true">PHOTOSHOP</div>
+								<div class="skillsTitle" contenteditable="true">English</div>
 								<div class="score" contenteditable="false">
 									<div class="star"></div>
 									<div class="star"></div>
@@ -278,27 +276,7 @@
 								</div>
 							</li>
 							<li>
-								<div class="skillsTitle" contenteditable="true">ILLUSTRATOR</div>
-								<div class="score" contenteditable="false">
-									<div class="star"></div>
-									<div class="star"></div>
-									<div class="star"></div>
-									<div class="star"></div>
-									<div class="star"></div>
-								</div>
-							</li>
-							<li>
-								<div class="skillsTitle" contenteditable="true">INDESIGN</div>
-								<div class="score" contenteditable="false">
-									<div class="star"></div>
-									<div class="star"></div>
-									<div class="star"></div>
-									<div class="star"></div>
-									<div class="star"></div>
-								</div>
-							</li>
-							<li>
-								<div class="skillsTitle" contenteditable="true">FLASH</div>
+								<div class="skillsTitle" contenteditable="true">Global Mobility</div>
 								<div class="score" contenteditable="false">
 									<div class="star"></div>
 									<div class="star"></div>
@@ -327,97 +305,68 @@
 									<div class="star"></div>
 								</div>
 							</li>
-							<div id="skill1">
-								<li>
-									<div class="skillsTitle" contenteditable="true">JQUERY</div>
-									<div class="score" contenteditable="false">
-										<div class="star"></div>
-										<div class="star"></div>
-										<div class="star"></div>
-										<div class="star"></div>
-										<div class="star"></div>
-									</div>
-								</li>
-								<li>
-									<div class="skillsTitle" contenteditable="true">AUTOCAD</div>
-									<div class="score" contenteditable="false">
-										<div class="star"></div>
-										<div class="star"></div>
-										<div class="star"></div>
-										<div class="star"></div>
-										<div class="star"></div>
-									</div>
-								</li>
-							</div>
+							<li>
+								<div class="skillsTitle" contenteditable="true">JQUERY</div>
+								<div class="score" contenteditable="false">
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+							</li>
+							<li>
+								<div class="skillsTitle" contenteditable="true">AUTOCAD</div>
+								<div class="score" contenteditable="false">
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+							</li>
 						</ul>
 						<div class="clearfix"></div>
 
 				</div>
 				<div class="achievement">
-				<div class="toolbarAch">
+				<div class="toolbar">
 					<i class="material-icons add">add_circle</i>
 					<i class="material-icons delete">remove_circle</i>
 
 				</div>
-					<h2 contenteditable="true">ACHIEVEMENT</h2>
-					<ul>
+					<h2 contenteditable="true">獎牌/證照 ❖ ACHIEVEMENT</h2>
+					<ul style="margin-top: 20px;margin-left: 20px;">
 						<div id="award1">
 						<li>
-							<div class="achTitle" contenteditable="true">GRAPHIC DESIGN AWARD</div>
-							<p contenteditable="true" class="achP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ea labore doloremque eaque veritatis consectetur distinctio, ipsam perspiciatis cum expedita.</p>
+							<div class="achTitle" contenteditable="true">澎湖馬拉松比賽</div>
+							<p contenteditable="true" class="achP" style="margin-top: 8px">2006年全馬組-第四名</p>
+						</li>
+						<li>
+							<div class="achTitle" contenteditable="true">不動產經紀人</div>
+							<p contenteditable="true" class="achP" style="margin-top: 8px">2007年</p>
+						</li>
+						<li>
+							<div class="achTitle" contenteditable="true" style="margin-top: 20px;">潛水員執照</div>
+							<p contenteditable="true" class="achP" style="margin-top: 8px">2011年-進階潛水員</p>
 						</li>
 						<li >
-							<div class="achTitle" contenteditable="true">GRAPHIC DESIGN AWARD</div>
-							<p contenteditable="true" class="achP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ea labore doloremque eaque veritatis consectetur distinctio, ipsam perspiciatis cum expedita.</p>
+							<div class="achTitle" contenteditable="true" style="margin-top: 20px;">高考都市計畫技師</div>
+							<p contenteditable="true" class="achP" style="margin-top: 8px">2012全國-第六名正取</p>
 						</li>
 						</div>
 					</ul>
 					<div class="clearfix"></div>
 				</div>
+				
+				<!-- <button class="add">增加區塊</button> -->
 
 			</div>
-		</div>
+		</div><!-- <p class="achTitle" style="position: relative;z-index: 999;left:600px;top:0px;color:#999;">備註：本簡歷格式由 wgpd01學員廖萍樺 友情提供</p> -->
+
 	</div>
 	<script>
-		//更改背景
-		$(document).on("click","#bg1",function(e){
-			$(".wrap").attr("style",'background-image: url("./img/flowerBg.jpg")');
-		});
-		$(document).on("click","#bg2",function(e){
-			$(".wrap").attr("style",'background-image: url("./img/bg_txtr02.png")');
-		});
-		$(document).on("click","#bg03",function(e){
-			$(".wrap").attr("style",'background-image: url("./img/oceanBg.jpg")');
-		});
-
-		//自訂背景
-		// document.getElementById("bgMax").onclick = function() {bgFunction()};
-		// function bgFunction (bgInput){
-		// };
-
-
-		//  function readURL(bgInput) {
-  //           if (bgInput.files && bgInput.files[0]) {
-  //               var reader = new FileReader();
-
-  //               reader.onload = function (e) {
-  //               	var $li = $('li[id^="bg0"]:last');
-		// 			var num = parseInt( $li.prop("id").match(/\d+/g), 10 ) +1;
-		// 			var $bg = $li.clone().prop('id', 'bg0'+num ).css("margin-left","4px");
-		// 			$li.after( $bg ).siblings('selector').find('img').attr('src',e.target.result)
-		// 											.width(64).height(60);
-		// 			// $li.siblings('selector').find('img').attr('src',e.target.result)
-		// 			// 								.width(64).height(60);
-
-
-		// 			// .find('img').attr('src',e.target.result)
-		// 			// 								.width(64).height(60);
-
-  //               };
-
-  //               reader.readAsDataURL(bgInput.files[0]);
-  //           }
-  //       };
+		
 
 		// 評分
 		$(document).on("click",".star",function(e){
@@ -444,7 +393,7 @@
 			$("[data-selected='true']").addClass('hover').prevAll(".star").addClass("hover");
 		});
 
-		// 換照片
+		//換照片
 
 		document.getElementById("logo").onclick = function() {myFunction()};
 		function myFunction (input){
@@ -468,6 +417,7 @@
 
         //列印
         function PrintElem(elem){
+        	$('#printbtn').remove();
         Popup($('<div/>').append($(elem).clone()).html());
 
     	};
@@ -485,31 +435,11 @@
 	      setTimeout(function(){mywindow.print();},1000);
 
 	      return true;
+	      
 		};
-		//加入區塊 experience
-		$(document).on("click",".addExp",function(e){
-			// get the last DIV which ID starts with ^= "award"
-			var $div = $('div[id^="experience"]:last');
-			var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
-			// Clone it and assign the new ID (i.e: from num 4 to ID "award4")
-			var $experience = $div.clone().prop('id', 'experience'+num );
-			// Finally insert $klon wherever you want
-			$div.after( $experience );
-
-		});
-		//加入區塊 SKILLS
-		$(document).on("click",".addSkills",function(e){
-			// get the last DIV which ID starts with ^= "award"
-			var $div = $('div[id^="skill"]:last');
-			var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
-			// Clone it and assign the new ID (i.e: from num 4 to ID "award4")
-			var $skill = $div.clone().prop('id', 'skill'+num );
-			// Finally insert $klon wherever you want
-			$div.after( $skill );
-
-		});
-		//加入區塊 ACHIEVEMENT
+		//加入區塊
 		$(document).on("click",".add",function(e){
+			console.log('add');
 			// get the last DIV which ID starts with ^= "award"
 			var $div = $('div[id^="award"]:last');
 			var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
@@ -521,36 +451,36 @@
 		});
 		//刪除區塊
 		$(document).on('click',".delete",function(e){
+			
 			if(e.target.nodeName == 'DIV'){
 				var $div = $('div[id^="award"]:last');
 				$div.remove();
 				console.log("123");
 			}
 		});
+		// var photoClick = document.querySelector('.button');
+		// photoClick.addEventListener('click',function (e){
+		// 	// alert(e.target.nodeName);
+		// 	if (e.target.nodeName == 'INPUT') {
+		// 		var element = document.querySelector('.photo');
+		// 		element.remove();
+		// 	}
+		// },false);
 
-		// toolbar顯示/不顯示 experience
-		$(document).on("click",".experience",function(e){
-			console.log(this.nodeName);
-			$(".toolbarExp").css("display","block");
-			setTimeout(function(){
-				$(".toolbarExp").css("display","none");
-			}, 6000);
-		});
+		//區塊focus
+		// $(".achTitle,.achP,.add,.achievement").focus(function(){
+		// 	$(".toolbar").css("display","block");
+		// });
+		// $(".achTitle,.achP,.add,.achievement").blur(function(){
+		// 	$(".toolbar").css("display","none");
+		// });
 
-		// toolbar顯示/不顯示 achievement
+		// toolbar顯示/不顯示
 		$(document).on("click",".achievement",function(e){
 			console.log(this.nodeName);
-			$(".toolbarAch").css("display","block");
+			$(".toolbar").css("display","block");
 			setTimeout(function(){
-				$(".toolbarAch").css("display","none");
-			}, 6000);
-		});
-		// toolbar顯示/不顯示 skill
-		$(document).on("click",".skills",function(e){
-			console.log(this.nodeName);
-			$(".toolbarSk").css("display","block");
-			setTimeout(function(){
-				$(".toolbarSk").css("display","none");
+				$(".toolbar").css("display","none");
 			}, 6000);
 		});
 
