@@ -291,7 +291,7 @@
 				<a href="#">Logout</a>
 			</li>
 			<li>
-				<a href="#">APO</a>
+				<a href="#">APO LIAO</a>
 			</li>
 		</ul>
 	</div>
@@ -398,12 +398,12 @@
 	</footer>
 	<script>
 	//建立新履歷
-		$(document).on("click","#createNew",function(e){
-			var $div = $('div[id^="cv"]:last');
-			var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
-			var $cv = $div.prop('id','cv'+num);
-			window.location.href = $cv[0].id+".html";
-		});
+		// $(document).on("click","#createNew",function(e){
+		// 	var $div = $('div[id^="cv"]:last');
+		// 	var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
+		// 	var $cv = $div.prop('id','cv'+num);
+		// 	window.location.href = $cv[0].id+".html";
+		// });
 	//刪除區塊
 	$(document).on("click","#delete",function(e){
 		$('#cv2').remove();
